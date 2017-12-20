@@ -71,10 +71,14 @@ a:visited {
 }
 
 #mobile-menu {
-  max-width: 17%;
+  max-width: 72%;
   align-content: flex-end;
   position: relative;
   top: 0.5rem;
+}
+
+.mobile-menu {
+  width: 20%;
 }
 
 .mobile-nav span {
@@ -325,6 +329,30 @@ footer {
   margin: 0 auto;
   padding-bottom: 10px;
 }
+
+/* Mobile Drop Down ---------- */
+
+
+.click-nav ul .clicker {
+  color:#FFF;
+}
+.click-nav ul li a {
+  display:block;padding:8px 10px 8px 40px;
+  background:#FFF;color:#333;text-decoration:none;
+}
+.click-nav ul li a:hover {
+  background:#F2F2F2;
+}
+
+/* Fallbacks */
+.click-nav .no-js ul {
+  display:none;
+}
+.click-nav .no-js:hover ul {
+  display:block;
+}
+
+
 
 /* Desktop Only ----- */
 
