@@ -97,7 +97,7 @@ a:visited {
 }
 
 .banner img {
-  max-width: 100%;
+  width: 80%;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   transform: scale(1.5);
@@ -314,4 +314,15 @@ footer {
   max-width: 90%;
   margin: 0 auto;
   padding-bottom: 10px;
+}
+
+/* Media Query for Desktop View ----- */
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
