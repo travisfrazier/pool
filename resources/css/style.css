@@ -71,7 +71,7 @@ a:visited {
 }
 
 #mobile-menu {
-  max-width: 15%;
+  max-width: 17%;
   align-content: flex-end;
   position: relative;
   top: 0.5rem;
@@ -84,7 +84,7 @@ a:visited {
   border-radius: 5px;
   margin-right: 1rem;
   margin-left: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   font-weight: bold;
   text-decoration-style: none;
 }
@@ -100,12 +100,13 @@ a:visited {
   max-width: 100%;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
+  transform: scale(1.5);
 }
 
 /* Filter Results Section --------------- */
 
 .filters {
-  background-color: #e7e6e6;
+  background-color: #f0eeee;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.5px solid #696b6d;
@@ -160,7 +161,7 @@ main {
 .business {
   text-align: center;
   padding-top: 2rem;
-  max-width: 90%;
+  width: 90%;
   margin: auto;
   box-shadow: 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999
 }
