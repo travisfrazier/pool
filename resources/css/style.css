@@ -336,6 +336,10 @@ footer {
   display: none;
 }
 
+.desktop-top {
+  display: none;
+}
+
 /* Media Query for Desktop View ----- */
 
 @media screen and (min-width: 768px) {
@@ -356,7 +360,7 @@ footer {
     margin: 0.5rem;
     border-radius: 10px;
     width: 40% !important;
-    
+    box-shadow: 3px 3px 3px 3px #999, 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
   }
 
   .business .middle, .last h1 {
@@ -389,6 +393,8 @@ footer {
   .services {
     padding-right: 1rem;
     padding-left: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   /* Navigation and Header Desktop Styles ----- */
@@ -441,6 +447,28 @@ footer {
     font-size: 0.90rem;
     font-weight: bold;
     text-decoration-style: none;
+  }
+
+  .desktop-top {
+    background-color: #1f59b1;
+    display: block;
+  }
+
+  .desktop-top ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 1rem;
+  } 
+
+  .contain {
+    max-width: 1250px;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   /* Filter Section ----- */
