@@ -690,3 +690,16 @@ label.light {
 .question-section p {
   text-align: left;
 }
+
+button {
+  border: none;
+  color: #29d4c6;
+  font-size: 1.25rem;
+  text-align: right;
+  font-size: 1rem;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -81,7 +81,7 @@
       <p class="talk">Can't talk now? Click below to send an email.</p>
       <div class="contact">
         <img src="./resources/images/email-icon.png">
-        <a href="#"><span>Contact this Pro</span></a>
+        <a id="myBtn" href="#"><span>Contact this Pro</span></a>
       </div>
       <div class="contact-info">
         <h2>Business Hours</h2>
@@ -123,7 +123,7 @@
       <p class="talk">Can't talk now? Click below to send an email.</p>
       <div class="contact">
         <img src="./resources/images/email-icon.png">
-        <a href="#"><span>Contact this Pro</span></a>
+        <a id="myBtntwo" href="#"><span>Contact this Pro</span></a>
       </div>
       <div class="contact-info">
         <h2>Business Hours</h2>
@@ -166,7 +166,7 @@
       <p class="talk">Can't talk now? Click below to send an email.</p>
       <div class="contact">
         <img src="./resources/images/email-icon.png">
-        <a id="myBtn" href="#"><span>Contact this Pro</span></a>
+        <a id="myBtnthree" href="#"><span>Contact this Pro</span></a>
       </div>
       <div class="contact-info">
         <h2>Business Hours</h2>
@@ -195,9 +195,6 @@
     </div>
   </main>
 
-  <!-- Trigger/Open The Modal -->
-  <button id="myBtn">Open Modal</button>
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
     <!-- Modal content -->
@@ -205,7 +202,7 @@
     <span class="close">&times;</span>
     <div class="modal-title">
       <p>EMAIL</p>
-      <h1>Premium Pools &amp; Spas of Charlotte</h1>
+      <h1 id="title">Aqua Experts</h1>
     </div>
     <form class="modal-form">
       <legend><p id="contact">Fill out the form below and Premium Pools<br> &amp; Spas will get in touch.</p></legend>
@@ -214,7 +211,7 @@
         <input type="text" id="name" name="user_name">
 
         <label for="number">Phone Number</label>
-        <input type="number" id="number" name="user_number">
+        <input type="text" id="number" name="user_number">
 
         <label for="mail">Email Address</label>
         <input type="email" id="mail" name="user_email">
@@ -229,6 +226,9 @@
           <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">No</label><br>
         </div>
       </fieldset>
+      <div class="button">
+        <button type="submit">Send</button>
+      </div>
     </form>
   </div>
 </div>
@@ -256,7 +256,10 @@
   </footer>
 
   <!-- JavaScripts -->
-  <script src="./resources/js/custom.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+  <script src="./resources/js/custom-one.js"></script>
+  <script src="./resources/js/custom-two.js"></script>
+
   <script src="./resources/js/ss-pika.js"></script>
 </body>
 </html>
