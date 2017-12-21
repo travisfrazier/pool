@@ -32,7 +32,7 @@ var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
 
-    changeModalText("Carolina Pool Pro", "Fill out the form below and Carolina Pool Pro will get in touch.")
+    changeModalText("Premium Pools & Spas of Charlotte", "Fill out the form below and Premium Pools & Spas of Charlotte will get in touch.")
     modal.style.display = "block";
 };
 
@@ -48,6 +48,8 @@ var btn = document.getElementById("myBtnthree");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
+    
+    changeModalText("Carolina Pool Specialists", "Fill out the form below and Carolina Pool Specialists will get in touch.")
     modal.style.display = "block";
 };
 
