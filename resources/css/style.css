@@ -343,8 +343,8 @@ footer {
   z-index: 2;
   background-color: white;
   width: 100%;
-  border-top: 5px solid blue;
-  border-bottom: 5px solid blue;
+  border-top: 5px solid #1fb19e;
+  border-bottom: 5px solid #1fb19e;
   display: none;
 }
 
@@ -353,8 +353,8 @@ footer {
 }
 
 .mobile-nav-list li {
-  background-color: grey;
-  color: #3a3d41;
+  background-color: #e9e9e9;
+  color: #6a6c70 !important;
   padding: 1rem;
   margin-bottom: 2px;
   position: relative;
@@ -381,12 +381,19 @@ footer {
   color: #1f59b1;
   padding: 1.75rem;
   text-align: center;
+  font-weight: bold;
 }
 
 .mobile-nav-list-close {
   position: absolute;
   right: 20px;
   top: 15px;
+  font-weight: bold;
+  color: #1fb19e;
+}
+
+.mobile-nav-list-close a:visited {
+  color: #1fb19e !important;
 }
 
 
