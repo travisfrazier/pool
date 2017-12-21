@@ -81,6 +81,11 @@ a:visited {
   width: 20%;
 }
 
+.mobile-nav {
+  position: relative;
+}
+
+
 .mobile-nav span {
   border: 2px solid #1f59b1;
   color: #1f59b1;
@@ -332,24 +337,56 @@ footer {
 
 /* Mobile Drop Down ---------- */
 
+.mobile-nav-list-wrapper {
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  border-top: 5px solid blue;
+  border-bottom: 5px solid blue;
+  display: none;
+}
 
-.click-nav ul .clicker {
-  color:#FFF;
-}
-.click-nav ul li a {
-  display:block;padding:8px 10px 8px 40px;
-  background:#FFF;color:#333;text-decoration:none;
-}
-.click-nav ul li a:hover {
-  background:#F2F2F2;
+.mobile-nav-list {
+  width: 100%;
 }
 
-/* Fallbacks */
-.click-nav .no-js ul {
-  display:none;
+.mobile-nav-list li {
+  background-color: grey;
+  color: #3a3d41;
+  padding: 1rem;
+  margin-bottom: 2px;
+  position: relative;
 }
-.click-nav .no-js:hover ul {
-  display:block;
+
+.mobile-nav-list li:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-nav-list li::after {
+  content: "";
+  background-image: url(../images/next-arrow.png);
+  height: 24px;
+  width: 22px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -12px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+.mobile-nav-list-title {
+  color: #1f59b1;
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.mobile-nav-list-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 
 
@@ -438,6 +475,7 @@ footer {
 
   .mobile-nav {
     display: none;
+    position: relative;
   }
 
   .nav, .desktop-nav {
