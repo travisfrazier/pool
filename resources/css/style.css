@@ -423,6 +423,123 @@ footer {
   display: none;
 }
 
+/* Modal Styles ---------- */
+/* MODAL ---------- */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 85%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+#mymodal fieldset {
+  padding: 0;
+}
+
+.modal-form input, textarea {
+  background-color: #ffffff;
+  width: 100%;
+  display: inline;
+  border: 1px solid #a5a7a8;
+  font-size: 1rem;
+}
+.modal-form input {
+  height: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-form textarea {
+  height: 3.25rem;
+  margin-bottom: 1rem;
+}
+
+.modal-form {
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+.modal-form legend {
+  color: #696b6d;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modal-title {
+  background-color: #1f59b1;
+  color: #ffffff;
+  font-size: 1.25rem;
+  padding: 1.30rem;
+}
+
+.modal-title p {
+  font-size: 0.7rem;
+}
+
+label.light {
+  display: inline;
+  font-size: 0.80rem;
+}
+
+.question-section input {
+  width: 5% !important;
+  height: 1rem !important;
+  margin-bottom: 1rem;
+}
+
+.question-section p {
+  text-align: left;
+}
+
+button {
+  border: none;
+  color: #29d4c6;
+  font-size: 1.25rem;
+  text-align: right;
+  font-size: 1rem;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Media Query for Desktop View ----- */
 
 @media screen and (min-width: 768px) {
@@ -673,120 +790,14 @@ footer {
     display: none;
   }
 
+  .modal-content {
+    width: 50%;
+  }
+
+  .form-container {
+    background-color: #e6e6e6;
+    padding: 1rem;
+  }
+
 }
 
-/* MODAL ---------- */
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  border: 1px solid #888;
-  width: 85%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-form label {
-  display: block;
-  margin-bottom: 8px;
-  padding-left: 0;
-}
-
-#mymodal fieldset {
-  padding: 0;
-}
-
-.modal-form input, textarea {
-  background-color: #ffffff;
-  width: 100%;
-  display: inline;
-  border: 1px solid #a5a7a8;
-  font-size: 1rem;
-}
-.modal-form input {
-  height: 2.75rem;
-  margin-bottom: 1rem;
-}
-
-.modal-form textarea {
-  height: 3.25rem;
-  margin-bottom: 1rem;
-}
-
-.modal-form {
-  padding: 1rem;
-  font-size: 0.85rem;
-}
-
-.modal-form legend {
-  color: #696b6d;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.modal-title {
-  background-color: #1f59b1;
-  color: #ffffff;
-  font-size: 1.25rem;
-  padding: 1.30rem;
-}
-
-.modal-title p {
-  font-size: 0.7rem;
-}
-
-label.light {
-  display: inline;
-  font-size: 0.80rem;
-}
-
-.question-section input {
-  width: 5% !important;
-  height: 1rem !important;
-  margin-bottom: 1rem;
-}
-
-.question-section p {
-  text-align: left;
-}
-
-button {
-  border: none;
-  color: #29d4c6;
-  font-size: 1.25rem;
-  text-align: right;
-  font-size: 1rem;
-}
-
-.button {
-  display: flex;
-  justify-content: flex-end;
-}

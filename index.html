@@ -216,28 +216,30 @@
     </div>
     <form class="modal-form">
       <legend><p id="contact">Fill out the form below and a Pool Pro will get in touch.</p></legend>
-      <fieldset>
-        <label for="name">First and last name</label>
-        <input type="text" id="name" name="user_name">
+      <div class="form-container">
+        <fieldset>
+          <label for="name">First and last name</label>
+          <input type="text" id="name" name="user_name">
 
-        <label for="number">Phone Number</label>
-        <input type="text" id="number" name="user_number">
+          <label for="number">Phone Number</label>
+          <input type="text" id="number" name="user_number">
 
-        <label for="mail">Email Address</label>
-        <input type="email" id="mail" name="user_email">
-      </fieldset>
-      <fieldset>
-        
-        <label for="">Comments or questions</label>
-        <textarea id="comment" name="user_comment"></textarea>
-        <div class="question-section">
-          <p class="newsletter">Do you currently own a pool or spa?</p>
-          <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">Yes</label><br>
-          <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">No</label><br>
+          <label for="mail">Email Address</label>
+          <input type="email" id="mail" name="user_email">
+        </fieldset>
+        <fieldset>
+          
+          <label for="">Comments or questions</label>
+          <textarea id="comment" name="user_comment"></textarea>
+          <div class="question-section">
+            <p class="newsletter">Do you currently own a pool or spa?</p>
+            <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">Yes</label><br>
+            <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">No</label><br>
+          </div>
+        </fieldset>
+        <div class="button">
+          <button type="submit">Send</button>
         </div>
-      </fieldset>
-      <div class="button">
-        <button type="submit">Send</button>
       </div>
     </form>
   </div>
