@@ -70,17 +70,20 @@ a:visited {
   max-width: 40%;
   padding-left: 1rem;
 }
-#mobile-menu {
+#mobile-menu-button {
   max-width: 77%;
 }
 .mobile-menu {
-  align-content: flex-end;
-  position: relative;
-  top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .mobile-menu {
-  width: 20%;
+  margin-top: 0;
+  width: 5rem;
+  height: 3.25rem;
+  padding: 0;
+  margin: 0;
+  z-index: 4;
 }
 
 .mobile-nav {
