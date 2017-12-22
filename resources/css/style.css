@@ -97,8 +97,8 @@ a:visited {
   color: #1f59b1;
   padding: 0.5rem;
   border-radius: 5px;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: 0rem;
+  margin-left: 0rem;
   font-size: 0.90rem;
   font-weight: bold;
   text-decoration-style: none;
@@ -108,7 +108,7 @@ a:visited {
   box-shadow: 0 1px 1px 1px #3a3d41;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .banner img {
