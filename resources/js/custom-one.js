@@ -65,5 +65,12 @@ $(".mobile-menu").click(function(e) {
 
 $(".mobile-nav-list-close").click(function(e) {
     $(".mobile-nav-list-wrapper").slideToggle();
-  });
+});
+
+$(".mobile-filter").click(function(e) {
+  $(".filter-form").slideToggle();
+});
+
+
+
 
