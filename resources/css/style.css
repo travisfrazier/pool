@@ -95,11 +95,8 @@ a:visited {
 
 .filters .filter {
   background-color: #ffffff;
-  border-top: 0.5px solid #696b6d;
-  border-bottom: 0.5px solid #696b6d;
-  border-right: 0.5px solid #696b6d;
-  border-left: 0.5px solid #696b6d;
   padding: 1rem;
+  box-shadow: 0 0 2px 1px rgb(180, 178, 178);
 }
 
 .question {
@@ -112,17 +109,15 @@ a:visited {
   display: flex;
   margin-right: 1rem;
   width: 9rem;
-  box-shadow: 0 0 2px 1px rgb(180, 177, 177);
 }
 
 .filter-form {
   background-color: #ffffff;
   max-width: 90%;
-  margin: auto;
+  margin: 1rem auto 1rem auto;
   padding: 2rem 1rem 1rem 1rem;
-  border: 0.5px solid #696b6d;
-  box-shadow: 0 0 2px 1px rgb(180, 178, 178);
   display: none;
+  box-shadow: 0 0 2px 1px rgb(180, 178, 178);
 }
 
 input {
