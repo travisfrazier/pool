@@ -114,7 +114,7 @@ a:visited {
 .filter-form {
   background-color: #ffffff;
   max-width: 90%;
-  margin: 1rem auto 1rem auto;
+  margin: 1rem auto 0rem auto;
   padding: 2rem 1rem 1rem 1rem;
   display: none;
   box-shadow: 0 0 2px 1px rgb(180, 178, 178);
