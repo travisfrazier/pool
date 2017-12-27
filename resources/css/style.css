@@ -133,8 +133,8 @@ a:visited {
   max-width: 90%;
   margin: 0 auto;
   align-items: center;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  padding-bottom: 0.10rem;
+  padding-top: 0.10rem;
 }
 
 .filter-head span {
@@ -154,7 +154,7 @@ a:visited {
   display: flex;
   margin-right: 1rem;
   width: 9rem;
-  box-shadow: 0 0 2px 1px rgb(138, 135, 135);
+  box-shadow: 0 0 2px 1px rgb(161, 159, 159);
 }
 
 .filter-form {
