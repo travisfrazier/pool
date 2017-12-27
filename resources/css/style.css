@@ -697,6 +697,8 @@ button {
   .filters .filter {
     background-color: #f0eeee;
     border: none;
+    box-shadow: none;
+    margin-left: 0.75rem;
   }
 
   .mobile-filter {
