@@ -1,3 +1,4 @@
+// Modal name change for business being contactated 
 function changeModalText(title, legend){
     console.log(title, legend)
     document.getElementById('title').innerHTML = title;
@@ -6,8 +7,8 @@ function changeModalText(title, legend){
 
 
 
-// Get the modal
-var modal = document.getElementById('myModal');
+// modal 1
+var modal = document.getElementById('contactModal');
 
 var btn = document.getElementById("myBtn");
 
@@ -23,8 +24,8 @@ span.onclick = function() {
     modal.style.display = "none";
 };
 
-// Get the modal
-var modal = document.getElementById('myModal');
+// modal 2
+var modal = document.getElementById('contactModal');
 
 var btn = document.getElementById("myBtntwo");
 
@@ -40,8 +41,8 @@ span.onclick = function() {
     modal.style.display = "none";
 };
 
-// Get the modal
-var modal = document.getElementById('myModal');
+// modal 3
+var modal = document.getElementById('contactModal');
 
 var btn = document.getElementById("myBtnthree");
 

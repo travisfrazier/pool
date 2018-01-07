@@ -535,7 +535,11 @@ button {
     box-shadow: 3px 3px 3px 3px #999, 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
   }
 
-  .business .middle, .busy h1 {
+  .business .middle, .aqua-experts h1 {
+    margin-bottom: 2rem;
+  }
+
+  .business .middle, .pool-specialists h1 {
     margin-bottom: 2rem;
   }
 
@@ -633,7 +637,7 @@ button {
     margin: 1rem;
   } 
 
-  .contain {
+  .container {
     max-width: 1250px;
     display: flex;
     justify-content: flex-end;
