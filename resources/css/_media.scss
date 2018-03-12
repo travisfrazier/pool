@@ -1,0 +1,266 @@
+/* Media Query for Desktop View ----- */
+@media screen and (min-width: 768px) {
+
+  /* Main Section Desktop Styles ----- */
+  main {
+    @include flex-one;
+    flex-direction: row;
+    padding: 2.5rem 1rem 1rem 1rem;
+    width: 1250px;
+    max-width: 100%;
+    margin: 0 auto 3rem auto;
+  }
+
+  .business {
+    margin: 0.5rem;
+    border-radius: 10px;
+    width: 40% !important;
+    box-shadow: 3px 3px 3px 3px #999, 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
+    .middle, .aqua-experts h1 {
+      margin-bottom: 2rem;
+    }
+    .middle, .pool-specialists h1 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .mobile-phone {
+    display: none;
+  }
+
+  .phone {
+    background-color: $color-light;
+    color: black;
+  }
+
+  #number {
+    @include flex-two;
+  }
+
+  .desktop-phone {
+    display: block;
+    font-size: 1.5rem;
+    border-top: 1px solid #999;
+    padding-top: 1rem;
+    border-radius: 0;
+  }
+
+  .services {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  /* Navigation and Header Desktop Styles ----- */
+  .banner img {
+    transform: scale(1);
+    width: 100%;
+    margin-bottom: 0rem;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: relative;
+  }
+
+  .nav, .desktop-nav {
+    display: block;
+  }
+
+  .nav {
+    width: 100%; /* Full width */  
+    z-index: 9999;   
+    box-shadow: 0 1px 1px #888888;   
+  }
+
+.desktop-nav {
+    @include flex-one;
+    height: 64px;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  .desktop-nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 1rem;
+  }
+
+  #pool-logo {
+    max-width: 18%;
+  }
+
+  .desktop-nav span {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0rem 1rem 0rem 1rem;
+    font-size: 0.90rem;
+    font-weight: $font-bold;
+    text-decoration-style: none;
+  }
+
+  .desktop-top {
+    background-color: $color-primary;
+    display: block;
+  }
+
+  .desktop-top ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 1rem;
+  } 
+
+  .container {
+    max-width: 1250px;
+    display: flex;
+    justify-content: flex-end;
+    color: $color-light;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Filter Section ----- */
+
+  .filters {
+    background-color: $color-background;
+    display: flex;
+    align-items: center;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .filter-head {
+    @include flex-one;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: $color-background;
+    border: none;
+  }
+
+  .filter-form {
+    background-color: $color-background;
+    max-width: 90%;
+    margin: auto;
+    padding: 2.25rem 1rem 1rem 1rem;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: none;
+    height: 5rem;
+  }
+
+  body > section > div.filter-form > form > span {
+    margin-right: 0rem;
+  }
+
+  .question {
+    width: 55%;
+    top: -0.6rem !important;
+  }
+
+  .filter {
+    border: none;
+    background-color: $color-background;
+  }
+
+  .filters .filter {
+    background-color: $color-background;
+    border: none;
+    box-shadow: none;
+    margin-left: 0.75rem;
+  }
+
+  .mobile-filter {
+    display: none;
+  }
+
+  .desktop-filter {
+    display: inline;
+  }
+
+  .filter-form form {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+  }
+
+  .filter-form form input, label {
+    margin-right: 1rem;
+  }
+
+  body > section > div.filter-form > form > input[type="checkbox"] {
+    margin-top: 0;
+  }
+
+  #filter-result {
+    border-right: 1px solid #a3a5a883;
+    padding-right: 2rem;
+  }
+
+
+  /* Footer Styles ----- */
+  footer {
+    color: $color-light;
+    text-align: center;
+  }
+  
+  .footer-top {
+    background-color: $color-primary;
+    padding-top: 1.5rem;
+  }
+  
+  .footer-bottom {
+    background-color: $color-footer;
+    font-size: 0.80rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  #footer-logo {
+    max-width: 15%;
+    margin: auto;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    height: 3rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+  
+  .social img {
+    max-height: 50%;
+    margin-right: 10px;
+  }
+  
+  #p-border {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border: none;
+  }
+
+  .mobile-footer-text {
+    display: none;
+  }
+
+  .modal-content {
+    width: 30%;
+  }
+
+  .form-container {
+    background-color: #e6e6e6;
+    padding: 1rem;
+  }
+}

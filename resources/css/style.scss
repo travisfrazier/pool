@@ -1,0 +1,464 @@
+// Variables 
+$font-family-primary: 'OpenSans', sans-serif;
+$font-bold: 700;
+$font-regular: 400;
+$font-light: 200;
+$font-extraBold: 900;
+$font-italicLight: 200;
+$font-italic: 400;
+
+$color-primary: #1f59b1;
+$color-secondary: #1fb19e;
+$color-footer: #2e71d4;
+$color-light: #ffffff;
+$color-background: #f0eeee;
+
+// Importing Font's From Stylesheet 
+@import 'fonts';
+
+// Mixins
+@mixin flex-one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main CSS Styles --------------- */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-family-primary;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+/* Navigation Styles --------------- */
+.mobile-nav {
+  @include flex-one;
+  position: relative;
+  height: 60px;
+  box-shadow: 0 1px 1px 1px #3a3d41;
+  #pool-logo {
+    max-width: 42%;
+    padding-left: 1.15rem;
+  }
+  span {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0rem;
+    font-size: 0.90rem;
+    font-weight: $font-bold;
+    text-decoration-style: none;
+  }
+  .mobile-menu {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 3.25rem;
+    padding: 0;
+    margin: 0;
+    z-index: 4;
+  }
+  #mobile-menu-button {
+    max-width: 77%;
+  }
+}
+.banner img {
+  width: 80%;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  transform: scale(1.5);
+}
+
+/* Filter Results Section --------------- */
+.filters {
+  background-color: $color-background;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid #696b6d;
+  .filter-head {
+    @include flex-one;
+    max-width: 90%;
+    margin: 0 auto;
+    span {
+      padding: 1rem;
+    }
+    #filter-result {
+      color: $color-primary;
+      font-weight: $font-extraBold;
+      margin-right: 0rem;
+    }
+  }
+  .filter {
+    background-color: $color-light;
+    padding: 1rem;
+    box-shadow: 0 0 2px 1px rgb(180, 178, 178);
+  }
+}
+
+.mobile-filter {
+  display: flex;
+  margin-right: 1rem;
+  width: 9rem;
+}
+
+.filter-form {
+  background-color: $color-light;
+  max-width: 90%;
+  margin: 1rem auto 0rem auto;
+  padding: 2rem 1rem 1rem 1rem;
+  display: none;
+  box-shadow: 0 0 2px 1px rgb(180, 178, 178);
+  .question {
+    width: 5.5%;
+    position: relative;
+    top: 0.25rem;
+  }
+  input {
+    margin-bottom: 1.5rem;
+  }
+  label {
+    padding-left: 7px;
+  }
+}
+
+/* Business Section ---------- */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.business {
+  text-align: center;
+  padding-top: 2rem;
+  width: 90%;
+  margin: auto;
+  box-shadow: 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+  .business:hover {
+    transform: scale(1.03);
+  }
+  img {
+    width: 12%;
+  }
+}
+
+.phone {
+  @include flex-one;
+  background-color: $color-primary;
+  color: $color-light;
+  padding: 5px 0px 5px 5px;
+  border-radius: 5px;
+  margin: 0rem auto 1.5rem auto;
+  max-width: 80%;
+  #tap {
+    font-size: 0.75rem;
+  }
+  #number {
+    font-weight: $font-bold;
+  }
+  img, span {
+    margin-right: 15px;
+  }
+}
+
+.talk {
+  margin-bottom: 1.5rem !important;
+  font-style: $font-italic;
+}
+
+.contact {
+  @include flex-two;
+  border-radius: 5px;
+  margin: 0rem auto 1.5rem auto;
+  border: 2px solid $color-secondary;
+  padding-top: 1rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 1rem;
+  max-width: 60%;
+  span {
+    color: $color-primary;
+    font-weight: $font-bold;
+  }
+  img {
+    margin: 0rem 1rem 0rem 1rem;
+  }
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+  h2, p {
+    margin-bottom: 0.75rem !important;
+  }
+  h2 {
+    font-weight: $font-bold;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.services {
+  @include flex-two;
+  background-color: #e7e6e6;
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
+  font-size: 0.75rem;
+  text-align: left;
+  margin: 0 auto;
+  .service {
+    margin-bottom: 0.5rem;
+    .hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+.last {
+  margin-bottom: 2rem;
+}
+
+/* Footer styles ---------- */
+footer {
+  color: $color-light;
+  text-align: center;
+  .footer-top {
+    background-color: $color-primary;
+    padding-top: 1.5rem;
+    img {
+      max-width: 60%;
+      margin: auto;
+    }
+  }
+  .footer-bottom {
+    background-color: #2e71d4;
+    font-size: 0.80rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    #p-border {
+      border-bottom: 1px solid $color-light;
+      max-width: 90%;
+      margin: 0 auto 7px auto;
+      padding-bottom: 7px;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  height: 3rem;
+  margin: 0 auto;
+  img {
+    width: auto;
+    height: 1.5rem;
+  }
+}
+
+/* Mobile Drop Down ---------- */
+.mobile-nav-list-wrapper {
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  background-color: $color-light;
+  width: 100%;
+  border-top: 5px solid $color-secondary;
+  border-bottom: 5px solid $color-secondary;
+  display: none;
+  #mobile-nav-list-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-weight: $font-bold;
+    color: $color-secondary;
+    font-size: 1.25rem;
+    a:visited {
+      color: $color-secondary;
+    }
+  }
+  .mobile-nav-list-title {
+    color: $color-primary;
+    padding: 1.75rem;
+    text-align: center;
+    font-weight: $font-bold;
+  }
+  .mobile-nav-list {
+    width: 100%;
+    li {
+      background-color: #e9e9e9;
+      color: #6a6c70 !important;
+      padding: 1rem;
+      margin-bottom: 2px;
+      position: relative;
+      a:visited { 
+        color: #696b6d;
+      }
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+    li::after {
+      content: "";
+      background-image: url(../images/next-arrow.png);
+      height: 24px;
+      width: 22px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -12px;
+      background-size: 20px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+/* Desktop Only ----- */
+.desktop-phone {
+  display: none;
+}
+
+.nav, .desktop-nav {
+  display: none;
+}
+
+.desktop-filter {
+  display: none;
+}
+
+.desktop-top {
+  display: none;
+}
+
+/* Modal Styles ---------- */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    border: 1px solid #888;
+    width: 85%; 
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: $font-bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-form {
+  padding: 1rem;
+  font-size: 0.85rem;
+  label {
+    display: block;
+    margin-bottom: 8px;
+    padding-left: 0;
+  }
+  legend {
+    color: #696b6d;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  input {
+    height: 2.75rem;
+    margin-bottom: 1rem;
+    background-color: $color-light;
+    display: inline;
+    width: 100%;
+    border: 1px solid #a5a7a8;
+    font-size: 1rem;
+  }
+  textarea {
+    height: 3.25rem;
+    margin-bottom: 1rem;
+    background-color: $color-light;
+    display: inline;
+    width: 100%;
+    border: 1px solid #a5a7a8;
+    font-size: 1rem;
+  }
+}
+
+.modal-title {
+  background-color: $color-primary;
+  color: $color-light;
+  font-size: 1.25rem;
+  padding: 1.30rem;
+  p {
+    font-size: 0.7rem;
+  }
+}
+
+label.light {
+  display: inline;
+  font-size: 0.80rem;
+}
+
+.question-section input {
+  width: 5% !important;
+  height: 1rem !important;
+  margin-bottom: 1rem;
+}
+
+.question-section p {
+  text-align: left;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    border: none;
+    color: #29d4c6;
+    font-size: 1.25rem;
+    text-align: right;
+    font-size: 1rem;
+  }
+}
+
+// Importing Media Query Stylesheet 
+@import 'media';

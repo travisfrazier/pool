@@ -1,0 +1,37 @@
+// Fonts
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans-extrabold.ttf') format('tff');
+  font-weight: $font-extraBold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans-bold.ttf') format('tff');
+  font-weight: $font-bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans-italic.ttf') format('tff');
+  font-weight: $font-italic;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans-regular.ttf') format('tff');
+  font-weight: $font-regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans-light.tff') format('tff');
+  font-weight: $font-light;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans-lightitalic.tff') format('tff');
+  font-weight: $font-italicLight;
+  font-style: italic;
+}
