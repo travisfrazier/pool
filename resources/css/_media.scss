@@ -31,10 +31,9 @@
   .phone {
     background-color: $color-light;
     color: black;
-  }
-
-  #number {
-    @include flex-two;
+    #number {
+      @include flex-two;
+    }
   }
 
   .desktop-phone {
@@ -69,7 +68,7 @@
   }
 
   .nav {
-    width: 100%; /* Full width */  
+    width: 100%;  
     z-index: 9999;   
     box-shadow: 0 1px 1px #888888;   
   }
@@ -100,6 +99,9 @@
     font-size: 0.90rem;
     font-weight: $font-bold;
     text-decoration-style: none;
+    &:hover {
+      color: $color-secondary;
+    }
   }
 
   .desktop-top {
@@ -111,6 +113,10 @@
     list-style-type: none;
     display: inline;
     margin: 1rem;
+    color: $color-light;
+    &:hover {
+      color: $color-background;
+    }
   } 
 
   .container {
@@ -236,12 +242,14 @@
     max-width: 90%;
     height: 3rem;
     margin: 0 auto;
-    padding-top: 1rem;
-  }
-  
-  .social img {
-    max-height: 50%;
-    margin-right: 10px;
+    img {
+      max-height: 50%;
+      margin-right: 10px;
+    }
+    span {
+      font-weight: $font-light;
+      margin-right: 1rem;
+    }
   }
   
   #p-border {
@@ -255,8 +263,10 @@
     display: none;
   }
 
-  .modal-content {
-    width: 30%;
+  .modal {
+    .modal-content {
+      width: 40%;
+    }
   }
 
   .form-container {
