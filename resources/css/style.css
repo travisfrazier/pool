@@ -543,8 +543,7 @@ label.light {
     border: none;
     display: inline-flex;
     align-items: center;
-    box-shadow: none;
-    height: 5rem; }
+    box-shadow: none; }
 
   body > section > div.filter-form > form > span {
     margin-right: 0rem; }
