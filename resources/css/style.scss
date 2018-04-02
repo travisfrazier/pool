@@ -31,7 +31,6 @@ $color-background: #f0eeee;
 }
 
 /* Main CSS Styles --------------- */
-
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -51,12 +50,17 @@ a:visited {
 
 /* Navigation Styles --------------- */
 .nav {
-  @include flex-one;
   position: relative;
+}
+.nav__content {
+  @include flex-one;
   height: 60px;
   box-shadow: 0 1px 1px 1px #3a3d41;
+  background-color: $color-light;
+  z-index: 10;
   .nav__find {
     border: 2px solid $color-primary;
+    z-index: 4;
     color: $color-primary;
     padding: 0.5rem;
     border-radius: 5px;
@@ -81,9 +85,11 @@ a:visited {
 .nav__home {
   width: 39%;
   margin-right: 1.2rem;
+  z-index: 4;
   .nav__logo {
     max-width: 100%;
     padding-left: 1.15rem;
+    z-index: 4;
   }
 }
 
@@ -292,15 +298,22 @@ a:visited {
 }
 
 /* Mobile Drop Down ---------- */
+
+// .nav__menu--open {
+//   //top: 100% !important;
+// }
+
 .nav__menu {
-  position: absolute;
   top: 100%;
-  z-index: 2;
+  transition-property: all;
+	transition-duration: 0.75s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  position: absolute;
+  z-index: 1;
   background-color: $color-light;
   width: 100%;
   border-top: 5px solid $color-secondary;
   border-bottom: 5px solid $color-secondary;
-  display: none;
   .nav__close{
     position: absolute;
     right: 20px;
