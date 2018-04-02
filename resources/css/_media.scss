@@ -2,7 +2,7 @@
 @media screen and (min-width: 768px) {
 
   /* Main Section Desktop Styles ----- */
-  main {
+  .business__container {
     @include flex-one;
     flex-direction: row;
     padding: 2.5rem 1rem 1rem 1rem;
@@ -16,27 +16,25 @@
     border-radius: 10px;
     width: 40% !important;
     box-shadow: 3px 3px 3px 3px #999, 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
-    .middle, .aqua-experts h1 {
-      margin-bottom: 2rem;
-    }
-    .middle, .pool-specialists h1 {
-      margin-bottom: 2rem;
-    }
   }
 
-  .mobile-phone {
+  .business__title {
+    margin-bottom: 2rem;
+  }
+
+  .business__phone--mobile {
     display: none;
   }
 
-  .phone {
+  .business__phone {
     background-color: $color-light;
     color: black;
-    #number {
+    .business__number--desktop {
       @include flex-two;
     }
   }
 
-  .desktop-phone {
+  .business__phone--desktop {
     display: block;
     font-size: 1.5rem;
     border-top: 1px solid #999;
@@ -44,7 +42,7 @@
     border-radius: 0;
   }
 
-  .services {
+  .business__services {
     padding-right: 1rem;
     padding-left: 1rem;
     border-bottom-left-radius: 10px;
@@ -58,58 +56,55 @@
     margin-bottom: 0rem;
   }
 
-  .mobile-nav {
+  .nav {
     display: none;
     position: relative;
   }
 
-  .nav, .desktop-nav {
-    display: block;
-  }
-
-  .nav {
+  .navigation {
     width: 100%;  
     z-index: 9999;   
-    box-shadow: 0 1px 1px #888888;   
+    box-shadow: 0 1px 1px #888888;
+    display: block;
   }
+  
 
-.desktop-nav {
+  .navigation__desktop {
     @include flex-one;
     height: 64px;
     max-width: 1250px;
     margin: 0 auto;
+    .navigation__find {
+      border: 2px solid $color-primary;
+      color: $color-primary;
+      padding: 0.5rem;
+      border-radius: 5px;
+      margin: 0rem 1rem 0rem 1rem;
+      font-size: 0.90rem;
+      font-weight: $font-bold;
+      text-decoration-style: none;
+      &:hover {
+        color: $color-secondary;
+      }
+    }
   }
 
-  .desktop-nav ul li {
+  .navigation__desktop ul li {
     list-style-type: none;
     display: inline;
     margin: 1rem;
   }
 
-  #pool-logo {
+  .site__logo--desktop {
     max-width: 18%;
   }
 
-  .desktop-nav span {
-    border: 2px solid $color-primary;
-    color: $color-primary;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin: 0rem 1rem 0rem 1rem;
-    font-size: 0.90rem;
-    font-weight: $font-bold;
-    text-decoration-style: none;
-    &:hover {
-      color: $color-secondary;
-    }
-  }
-
-  .desktop-top {
+  .top {
     background-color: $color-primary;
     display: block;
   }
 
-  .desktop-top ul li {
+  .top ul li {
     list-style-type: none;
     display: inline;
     margin: 1rem;
@@ -119,7 +114,7 @@
     }
   } 
 
-  .container {
+  .top__content {
     max-width: 1250px;
     display: flex;
     justify-content: flex-end;
@@ -144,7 +139,7 @@
     border-radius: 10px;
   }
   
-  .filter-head {
+  .filters__head {
     @include flex-one;
     max-width: 90%;
     margin: 0 auto;
@@ -152,7 +147,7 @@
     border: none;
   }
 
-  .filter-form {
+  .filters__form {
     background-color: $color-background;
     max-width: 90%;
     margin: auto;
@@ -163,79 +158,65 @@
     box-shadow: none;
   }
 
-  body > section > div.filter-form > form > span {
-    margin-right: 0rem;
-  }
-
-  .question {
+  .filters__question {
     width: 55%;
-    top: -0.6rem !important;
-  }
-
-  .filter {
-    border: none;
-    background-color: $color-background;
-  }
-
-  .filters .filter {
-    background-color: $color-background;
-    border: none;
-    box-shadow: none;
-    margin-left: 0.75rem;
-  }
-
-  .mobile-filter {
+    top: -0.6rem;
+    margin-right: 0rem;
     display: none;
   }
 
-  .desktop-filter {
+  .filters__mobile {
+    display: none;
+  }
+
+  .filters__desktop {
     display: inline;
   }
 
-  .filter-form form {
+  .filters__form form {
     display: inline-flex;
     align-items: center;
     border: none;
   }
 
-  .filter-form form input, label {
+  .filters__form .filters__input, .filters__label {
     margin-right: 1rem;
   }
 
-  body > section > div.filter-form > form > input[type="checkbox"] {
+  .filters__input {
     margin-top: 0;
   }
 
-  #filter-result {
+  .filters__result {
     border-right: 1px solid #a3a5a883;
     padding-right: 2rem;
   }
 
 
   /* Footer Styles ----- */
-  footer {
+  .footer__container {
     color: $color-light;
     text-align: center;
   }
   
-  .footer-top {
+  .footer--ltop {
     background-color: $color-primary;
     padding-top: 1.5rem;
   }
   
-  .footer-bottom {
+  .footer--bottom {
     background-color: $color-footer;
     font-size: 0.80rem;
     padding-top: 1.25rem;
     padding-bottom: 0.5rem;
   }
   
-  #footer-logo {
+  .footer__logo {
     max-width: 15%;
     margin: auto;
   }
   
-  .social {
+  .footer__social {
     display: flex;
     justify-content: center;
     max-width: 90%;
@@ -251,24 +232,24 @@
     }
   }
   
-  #p-border {
+  .footer__text {
     max-width: 90%;
     margin: 0 auto;
     padding-bottom: 10px;
     border: none;
   }
 
-  .mobile-footer-text {
+  .footer__text {
     display: none;
   }
 
   .modal {
-    .modal-content {
+    .modal__content {
       width: 40%;
     }
   }
 
-  .form-container {
+  .modal__inputs {
     background-color: #e6e6e6;
     padding: 1rem;
   }

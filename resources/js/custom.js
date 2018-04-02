@@ -1,18 +1,13 @@
-// Modal name change for business being contactated 
+// Modal business name change
 function changeModalText(title, legend){
     console.log(title, legend)
-    document.getElementById('title').innerHTML = title;
-    document.getElementById('contact').innerHTML = legend;
+    document.querySelector('.modal__title').innerHTML = title;
+    document.querySelector('.modal__contact').innerHTML = legend;
 }
-
-
-
 // modal 1
-var modal = document.getElementById('contactModal');
-
-var btn = document.getElementById("myBtn");
-
-var span = document.getElementsByClassName("close")[0];
+var modal = document.querySelector('.modal');
+var btn = document.querySelector('.business__email--one');
+var close = document.querySelector('.modal__close');
 
 btn.onclick = function() {
     
@@ -20,16 +15,14 @@ btn.onclick = function() {
     modal.style.display = "block";
 };
 
-span.onclick = function() {
+close.onclick = function() {
     modal.style.display = "none";
 };
 
 // modal 2
-var modal = document.getElementById('contactModal');
-
-var btn = document.getElementById("myBtntwo");
-
-var span = document.getElementsByClassName("close")[0];
+var modal = document.querySelector('.modal');
+var btn = document.querySelector('.business__email--two');
+var close = document.querySelector('.modal__close');
 
 btn.onclick = function() {
 
@@ -37,41 +30,36 @@ btn.onclick = function() {
     modal.style.display = "block";
 };
 
-span.onclick = function() {
+close.onclick = function() {
     modal.style.display = "none";
 };
 
 // modal 3
-var modal = document.getElementById('contactModal');
+var modal = document.querySelector('.modal');
+var btn = document.querySelector('.business__email--three');
+var close = document.querySelector('.modal');
 
-var btn = document.getElementById("myBtnthree");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-    
+btn.onclick = function() { 
     changeModalText("Carolina Pool Specialists", "Fill out the form below and Carolina Pool Specialists will get in touch.")
     modal.style.display = "block";
 };
 
-span.onclick = function() {
+close.onclick = function() {
     modal.style.display = "none";
 };
 
 
-// Dropdown Menu 
-$(".mobile-menu").click(function(e) {
-  $(".mobile-nav-list-wrapper").slideToggle();
+// Mobile drop down nav open
+$(".nav__link").click(function(e) {
+  $(".nav__menu").slideToggle();
 });
 
-$(".mobile-nav-list-close").click(function(e) {
-    $(".mobile-nav-list-wrapper").slideToggle();
+// close
+$(".nav__close").click(function(e) {
+    $(".nav__menu").slideToggle();
 });
 
-$(".mobile-filter").click(function(e) {
-  $(".filter-form").slideToggle();
+// filter service drop down
+$(".filters__mobile").click(function(e) {
+  $(".filters__form").slideToggle();
 });
-
-
-
-

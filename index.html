@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pool Pros</title>
-  <!-- Reset CSS -->
-  <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
   <!-- Fonts -->
   <link href="./resources/webfonts/ss-pika.css" rel="stylesheet" />
   <!-- Custom CSS -->
@@ -16,145 +14,155 @@
 
   <!-- Banner and Navigation -->
   <header>
-    <nav class="mobile-nav">
-      <img id="pool-logo" src="./resources/images/pool-pros-logo.png">
-      <span class="ss-location"><a href="#main">FIND A PRO</a></span>
-      <a class="mobile-menu" href="#"><img id="mobile-menu-button" src="./resources/images/menu-icon-mobile.png"></a>
-      <div class="mobile-nav-list-wrapper">
-        <a href="#" id="mobile-nav-list-close" class="mobile-nav-list-close">X</a>
-        <h3 class="mobile-nav-list-title">MENU</h3>
-        <ul class="nav-list mobile-nav-list">
+    <nav class="nav">
+      <a class="nav__home" href="#">
+        <img class="nav__logo" src="./resources/images/pool-pros-logo.png">
+      </a>
+      <span class="nav__find ss-location"><a href="#main">FIND A PRO</a></span>
+      <a class="nav__link" href="#">
+        <img class="nav__button" src="./resources/images/menu-icon-mobile.png">
+      </a>
+      <div class="nav__menu">
+        <a href="#" class="nav__close">X</a>
+        <h3 class="nav__title">MENU</h3>
+        <ul class="nav__list">
           <li><a href="#">Pools &amp; Spas</a></li>
           <li><a href="#">Supplies</a></li>
           <li><a href="#">Resources</a></li>
-          <li id="sign-in"><a href="#">Services</a></li>
+          <li><a href="#">Services</a></li>
         </ul>
       </div>
     </nav>
-    <div class="desktop-top">
-      <div class="container">
+    <div class="top">
+      <div class="top__content">
         <ul>
           <a href="http://www.hudsonpooldist.com/" target="_blank"><li>Dealers and Distributors</li></a>
           <a href="http://americanpool.com/services/pool-maintenance-services/" target="_blank"><li>Commercial Service</li></a>
         </ul>
       </div>
     </div>
-    <div class="nav">
-      <nav class="desktop-nav">
-        <img id="pool-logo" src="./resources/images/pool-pros-logo.png">
-        <div class="menu">
-          <ul class="nav-list main-nav">
-            <li><a href="#">Pools &amp; Spas</a></li>
-            <li><a href="#">Supplies</a></li>
-            <li><a href="#">Resources</a></li>
-            <li id="sign-in"><a href="#">Services</a></li>
-            <li id="find-pro"><a href="#main"><span class="ss-location">Find a Pool Pro</span></a></li>
-          </ul>
-      </nav>
-    </div>
+    <nav class="navigation">
+      <div class="navigation__desktop">
+        <img class="site__logo--desktop" src="./resources/images/pool-pros-logo.png">
+        <ul class="navigation__list">
+          <li><a href="#">Pools &amp; Spas</a></li>
+          <li><a href="#">Supplies</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#main">
+            <span class="navigation__find ss-location">Find a Pool Pro</span>
+          </a></li>
+        </ul>
+    </nav>
     <div class="banner">
-      <img src="./resources/images/water-image.png">
+      <img class="banner__img" src="./resources/images/water-image.png">
     </div>
   </header>
 
   <!-- Filter Result Section -->
   <section class="filters">
-    <div class="filter-head">
-      <span id="filter-result">7 dealers in 28226</span>
-      <a class="filter mobile-filter" href="#">Filter Results &#x25BE;</a>
-      <span class="filter desktop-filter">Filter Results</span>
+    <div class="filters__head">
+      <span class="filters__result">7 dealers in 28226</span>
+      <a class="filters__mobile" href="#">Filter Results &#x25BE;</a>
+      <span class="filters__desktop">Filter Results</span>
     </div>
-    <div class="filter-form">
-      <form>
-        <span class="question-filter-box"><input type="checkbox"><label>Service</label></span><br>
-        <span class="question-filter-box"><input type="checkbox"><label>Installation</label></span><br>
-        <span class="question-filter-box"><input type="checkbox"><label>Residential</label></span><br>
-        <span class="question-filter-box"><input type="checkbox"><label>Commercial</label></span>
-        <span><img class="question" src="./resources/images/tool-tip-icon-filtering.png" align="middle"></span>
-      </form>
-    </div>
+    <form class="filters__form">
+      <span><input class="filters__input" type="checkbox"><label class="filters__label">Service</label></span><br>
+      <span><input class="filters__input" type="checkbox"><label class="filters__label">Installation</label></span><br>
+      <span><input class="filters__input" type="checkbox"><label class="filters__label">Residential</label></span><br>
+      <span><input class="filters__input" type="checkbox"><label class="filters__label">Commercial</label></span>
+      <!-- <span><img class="filters__question" src="./resources/images/tool-tip-icon-filtering.png" align="middle"></span> -->
+    </form>
   </section>
 
   <!-- Main Section Results -->
-  <main id="main">
+  <main class="business__container">
     <!-- Business 1 -->
-    <div class="business aqua-experts">
-      <h1>Aqua Experts</h1><br>
-      <a class="click-to-call" href="tel:+1-888-888-8888"><div class="mobile-phone phone">
-        <img src="./resources/images/phone-icon-mobile.png">
-        <span id="tap">Tap to call</span>
-        <span id="number">1.888.888.8888</span>
-      </div></a>
-      <div class="desktop-phone phone">
-        <span id="number"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+    <div class="business business--one">
+      <h1 class="business__title">Aqua Experts</h1><br>
+      <a class="business__call" href="tel:+1-888-888-8888">
+        <div class="business__phone business__phone--mobile">
+          <img src="./resources/images/phone-icon-mobile.png">
+          <span class="business__call">Tap to call</span>
+          <span class="business__number">1.888.888.8888</span>
+        </div>
+      </a>
+      <div class="business__phone business__phone--desktop">
+        <span class="business__number--desktop"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
       </div>
-      <p class="talk">Can't talk now? Click below to send an email.</p>
-      <a class="email-button" id="myBtn" href="#"><div class="contact">
-        <img src="./resources/images/email-icon.png">
-        <span>Contact this Pro</span>
-      </div></a>
-      <div class="contact-info">
-        <h2>Business Hours</h2>
-        <p>Weekdays 7:00am - 7:00pm</p>
-        <p>Saturdays 7:00am - 3:00pm</p>
-        <p>Sundays - CLOSED</p>
+      <p class="business__talk">Can't talk now? Click below to send an email.</p>
+      <a class="business__email business__email--one" href="#">
+        <div class="business__contact">
+          <img src="./resources/images/email-icon.png">
+          <span>Contact this Pro</span>
+        </div>
+      </a>
+      <div class="business__info">
+        <h2 class="business__hours">Business Hours</h2>
+        <p class="business__time">Weekdays 7:00am - 7:00pm</p>
+        <p class="business__time">Saturdays 7:00am - 3:00pm</p>
+        <p class="business__time">Sundays - CLOSED</p>
       </div>
-      <div class="services">
-        <div class="service-one">
-          <div class="service">
+      <div class="business__services">
+        <div>
+          <div class="business__service">
             <span><img src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
           </div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
           </div>
         </div>
         <div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
           </div>
-          <div class="service">
-            <span class="hidden"><img src="./resources/images/gear-residential-pro.png" align="middle"> Residential Pro</span>
+          <div class="business__service">
+            <span class="business__service--hidden"><img src="./resources/images/gear-residential-pro.png" align="middle"> Residential Pro</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Business 2 -->
-    <div class="business middle">
-      <h1>Premium Pools &amp; Spas of<br> Charlotte</h1>
-      <a class="click-to-call" href="tel:+1-888-888-8888"><div class="mobile-phone phone">
-        <img src="./resources/images/phone-icon-mobile.png">
-        <span id="tap">Tap to call</span>
-        <span id="number">1.888.888.8888</span>
-      </div></a>
-      <div class="desktop-phone phone">
-        <span id="number"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+    <div class="business business--two">
+      <h1 class="business__title">Premium Pools &amp; Spas of<br> Charlotte</h1>
+      <a class="business__call" href="tel:+1-888-888-8888">
+        <div class="business__phone business__phone--mobile">
+          <img src="./resources/images/phone-icon-mobile.png">
+          <span class="business__call">Tap to call</span>
+          <span class="business__number">1.888.888.8888</span>
+        </div>
+      </a>
+      <div class="business__phone business__phone--desktop">
+        <span class="business__number--desktop"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
       </div>
-      <p class="talk">Can't talk now? Click below to send an email.</p>
-      <a class="email-button" id="myBtntwo" href="#"><div class="contact">
-        <img src="./resources/images/email-icon.png">
-        <span>Contact this Pro</span>
-      </div></a>
-      <div class="contact-info">
-        <h2>Business Hours</h2>
-        <p>Weekdays 7:00am - 7:00pm</p>
-        <p>Saturdays 7:00am - 3:00pm</p>
-        <p>Sundays - On Call</p>
+      <p class="business__talk">Can't talk now? Click below to send an email.</p>
+      <a class="business__email business__email--two" href="#">
+        <div class="business__contact">
+          <img src="./resources/images/email-icon.png">
+          <span>Contact this Pro</span>
+        </div>
+      </a>
+      <div class="business__info">
+        <h2 class="business__hours">Business Hours</h2>
+        <p class="business__time">Weekdays 7:00am - 7:00pm</p>
+        <p class="business__time">Saturdays 7:00am - 3:00pm</p>
+        <p class="business__time">Sundays - On Call</p>
       </div>
-      <div class="services">
-        <div class="service-one">
-          <div class="service">
+      <div class="business__services">
+        <div>
+          <div class="business__service">
             <span><img src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
           </div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
           </div>
         </div>
         <div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
           </div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
           </div>
         </div>
@@ -164,40 +172,44 @@
 
     <!-- Business 3 -->
     <div class="business last pool-specialists">
-      <h1>Carolina Pool Specialists</h1><br>
-      <a class="click-to-call" href="tel:+1-888-888-8888"><div class="mobile-phone phone">
-        <img src="./resources/images/phone-icon-mobile.png">
-        <span id="tap">Tap to call</span>
-        <span id="number">1.888.888.8888</span>
-      </div></a>
-      <div class="desktop-phone phone">
-        <span id="number"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      <h1 class="business__title">Carolina Pool Specialists</h1><br>
+      <a class="business__call" href="tel:+1-888-888-8888">
+        <div class="business__phone business__phone--mobile">
+          <img src="./resources/images/phone-icon-mobile.png">
+          <span class="business__call">Tap to call</span>
+          <span class="business__number">1.888.888.8888</span>
+        </div>
+      </a>
+      <div class="business__phone business__phone--desktop">
+        <span class="business__number--desktop"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
       </div>
-      <p class="talk">Can't talk now? Click below to send an email.</p>
-      <a class="email-button" id="myBtnthree" href="#"><div class="contact">
-        <img src="./resources/images/email-icon.png">
-        <span>Contact this Pro</span>
-      </div></a>
-      <div class="contact-info">
-        <h2>Business Hours</h2>
-        <p>Weekdays 7:00am - 7:00pm</p>
-        <p>Saturdays 7:00am - 3:00pm</p>
-        <p>Sundays 7:00am - 3:00pm</p>
+      <p class="business__talk">Can't talk now? Click below to send an email.</p>
+      <a class="business__email business__email--three" href="#">
+        <div class="business__contact">
+          <img src="./resources/images/email-icon.png">
+          <span>Contact this Pro</span>
+        </div>
+      </a>
+      <div class="business__info">
+        <h2 class="business__hours">Business Hours</h2>
+        <p class="business__time">Weekdays 7:00am - 7:00pm</p>
+        <p class="business__time">Saturdays 7:00am - 3:00pm</p>
+        <p class="business__time">Sundays 7:00am - 3:00pm</p>
       </div>
-      <div class="services">
-        <div class="service-one">
-          <div class="service">
+      <div class="business__services">
+        <div>
+          <div class="business__service">
             <span><img src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
           </div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
           </div>
         </div>
         <div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
           </div>
-          <div class="service">
+          <div class="business__service">
             <span><img src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
           </div>
         </div>
@@ -206,38 +218,35 @@
   </main>
 
 <!-- Contact Modal for Business -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="modal-title">
+<div class="modal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <div class="modal__title">
       <p>EMAIL</p>
-      <h1 id="title">Pool Pros</h1>
+      <h1 class="modal__title">Pool Pros</h1>
     </div>
-    <form class="modal-form">
-      <legend><p id="contact">Fill out the form below and a Pool Pro will get in touch.</p></legend>
-      <div class="form-container">
+    <form class="modal__form">
+      <legend><p class="modal__contact">Fill out the form below and a Pool Pro will get in touch.</p></legend>
+      <div class="modal__inputs">
         <fieldset>
-          <label for="name">First and last name</label>
+          <label>First and last name</label>
           <input type="text" id="name" name="user_name">
-
-          <label for="number">Phone Number</label>
+          <label>Phone Number</label>
           <input type="text" id="number" name="user_number">
-
-          <label for="mail">Email Address</label>
+          <label>Email Address</label>
           <input type="email" id="mail" name="user_email">
         </fieldset>
         <fieldset>
-          
-          <label for="">Comments or questions</label>
+          <label>Comments or questions</label>
           <textarea id="comment" name="user_comment"></textarea>
-          <div class="question-section">
-            <p class="newsletter">Do you currently own a pool or spa?</p>
+          <div class="modal__question">
+            <p class="modal__newsletter">Do you currently own a pool or spa?</p>
             <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">Yes</label><br>
             <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">No</label><br>
           </div>
         </fieldset>
-        <div class="button-container">
-          <button type="submit">Send</button>
+        <div class="modal__button">
+          <button class="modal__submit" type="submit">Send</button>
         </div>
       </div>
     </form>
@@ -246,25 +255,25 @@
 
 
   <!-- Footer Section -->
-  <footer>
-    <div class="footer-top">
-      <img id="footer-logo" src="./resources/images/pool-pros-logo-footer.png">
-      <div class="social">
+  <footer class="footer__container">
+    <div class="footer footer--top">
+      <img class="footer__logo" src="./resources/images/pool-pros-logo-footer.png">
+      <div class="footer__social">
         <span>CONNECT WITH US</span>
-        <div class="icons">
+        <div class="footer__icons">
           <a href="https://twitter.com/"><img src="./resources/images/twitter-icon.png"></a>
           <a href="https://facebook.com/"><img src="./resources/images/facebook-icon.png"></a>
           <a href="https://youtube.com/"><img src="./resources/images/youtube-icon.png"></a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="mobile-footer-text" id="p-border">Dealers and Distrubutors | Commercial Service</p>
+    <div class="footer footer--bottom">
+      <p class="footer__text">Dealers and Distrubutors | Commercial Service</p>
       <p>2017 Pool Pros | Privacy Policy | Terms and Conditions</p>
     </div>
   </footer>
 
-  <!-- JavaScripts -->
+  <!-- JavaScript -->
   <script src="./resources/js/jquery-2.1.4.min.js"></script>
   <script src="./resources/js/custom.js"></script>
   <script src="./resources/js/ss-pika.js"></script>
