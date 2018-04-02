@@ -18,7 +18,7 @@ $color-background: #f0eeee;
 // Font import
 @import 'fonts';
 
-// Mixins
+// Mixins ------------------------//
 @mixin flex-one {
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ $color-background: #f0eeee;
   align-items: center;
 }
 
-/* Main CSS Styles --------------- */
+// Default styles ----------------------//
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -40,16 +40,17 @@ html {
   }
 }
 
-a:link {
-  text-decoration: none;
+a {
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+    color: $color-primary;
+  }
 }
 
-a:visited {
-  text-decoration: none;
-  color: $color-primary;
-}
-
-/* Navigation Styles --------------- */
+// Header and navigation styles --------//
 .nav {
   position: relative;
 }
@@ -59,28 +60,6 @@ a:visited {
   box-shadow: 0 1px 1px 1px #3a3d41;
   background-color: $color-light;
   z-index: 10;
-  .nav__find {
-    border: 2px solid $color-primary;
-    z-index: 4;
-    color: $color-primary;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin: 0rem;
-    font-size: 0.90rem;
-    font-weight: $font-bold;
-    text-decoration-style: none;
-  }
-  .nav__link {
-    margin-top: 1rem;
-    width: 5rem;
-    height: 3.25rem;
-    padding: 0;
-    margin: 0;
-    z-index: 4;
-  }
-  .nav__button {
-    max-width: 77%;
-  }
 }
 
 .nav__home {
@@ -94,6 +73,29 @@ a:visited {
   }
 }
 
+.nav__find {
+  border: 2px solid $color-primary;
+  z-index: 4;
+  color: $color-primary;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0rem;
+  font-size: 0.90rem;
+  font-weight: $font-bold;
+  text-decoration-style: none;
+}
+
+.nav__link {
+  margin-top: 1rem;
+  width: 5rem;
+  height: 3.25rem;
+  padding: 0;
+  margin: 0;
+  z-index: 4;
+  .nav__button {
+    max-width: 77%;
+  }
+}
 
 .banner__img {
   width: 80%;
@@ -102,9 +104,68 @@ a:visited {
   transform: scale(1.5);
 }
 
-.navigation__list {
-  a:hover {
+// Mobile drop down -------------------- //
+.nav__menu {
+  top: 100%;
+  transition-property: all;
+  transition-duration: 0.75s;
+  overflow: hidden;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  position: absolute;
+  z-index: 1;
+  background-color: $color-light;
+  width: 100%;
+  height: 0px;
+  .nav__close{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-weight: $font-bold;
     color: $color-secondary;
+    font-size: 1.25rem;
+    a:visited {
+      color: $color-secondary;
+    }
+  }
+  .nav__title {
+    color: $color-primary;
+    padding: 1.75rem;
+    text-align: center;
+    font-weight: $font-bold;
+  }
+}
+// Open toggle class for JS
+.nav__menu--open {
+  height: 270px !important;
+  border-top: 5px solid $color-secondary;
+  border-bottom: 5px solid $color-secondary;
+}
+
+.nav__list {
+  width: 100%;
+  li {
+    background-color: #e9e9e9;
+    color: #6a6c70 !important;
+    padding: 1rem;
+    margin-bottom: 2px;
+    position: relative;
+    a:visited { 
+      color: #696b6d;
+    }
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  li::after {
+    background-image: url(../images/next-arrow.png);
+    height: 24px;
+    width: 22px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -12px;
+    background-size: 20px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -298,71 +359,6 @@ a:visited {
   }
 }
 
-/* Mobile Drop Down ---------- */
-
-// .nav__menu--open {
-//   //top: 100% !important;
-// }
-
-.nav__menu {
-  top: 100%;
-  transition-property: all;
-  transition-duration: 0.75s;
-  overflow: hidden;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  position: absolute;
-  z-index: 1;
-  background-color: $color-light;
-  width: 100%;
-  border-top: 5px solid $color-secondary;
-  border-bottom: 5px solid $color-secondary;
-  .nav__close{
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-weight: $font-bold;
-    color: $color-secondary;
-    font-size: 1.25rem;
-    a:visited {
-      color: $color-secondary;
-    }
-  }
-  .nav__title {
-    color: $color-primary;
-    padding: 1.75rem;
-    text-align: center;
-    font-weight: $font-bold;
-  }
-  .nav__list {
-    width: 100%;
-    li {
-      background-color: #e9e9e9;
-      color: #6a6c70 !important;
-      padding: 1rem;
-      margin-bottom: 2px;
-      position: relative;
-      a:visited { 
-        color: #696b6d;
-      }
-    }
-    li:last-child {
-      margin-bottom: 0;
-    }
-    li::after {
-      content: "";
-      background-image: url(../images/next-arrow.png);
-      height: 24px;
-      width: 22px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      margin-top: -12px;
-      background-size: 20px;
-      background-repeat: no-repeat;
-    }
-  }
-}
-
 /* Desktop Only ----- */
 .business__phone--desktop {
   display: none;
@@ -484,5 +480,5 @@ label.light {
   }
 }
 
-// Importing Media Query Stylesheet 
+// Media query style sheets ----- //
 @import 'media';

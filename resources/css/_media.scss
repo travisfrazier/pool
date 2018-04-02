@@ -67,6 +67,12 @@
     box-shadow: 0 1px 1px #888888;
     display: block;
   }
+
+  .navigation__list {
+    a:hover {
+      color: $color-secondary;
+    }
+  }
   
 
   .navigation__desktop {

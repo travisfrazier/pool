@@ -75,7 +75,6 @@ table {
   src: url("../fonts/opensans-lightitalic.tff") format("tff");
   font-weight: 200;
   font-style: italic; }
-/* Main CSS Styles --------------- */
 html {
   box-sizing: border-box;
   font-size: 16px; }
@@ -85,12 +84,10 @@ html {
 
 a:link {
   text-decoration: none; }
-
 a:visited {
   text-decoration: none;
   color: #1f59b1; }
 
-/* Navigation Styles --------------- */
 .nav {
   position: relative; }
 
@@ -102,25 +99,6 @@ a:visited {
   box-shadow: 0 1px 1px 1px #3a3d41;
   background-color: #ffffff;
   z-index: 10; }
-  .nav__content .nav__find {
-    border: 2px solid #1f59b1;
-    z-index: 4;
-    color: #1f59b1;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin: 0rem;
-    font-size: 0.90rem;
-    font-weight: 700;
-    text-decoration-style: none; }
-  .nav__content .nav__link {
-    margin-top: 1rem;
-    width: 5rem;
-    height: 3.25rem;
-    padding: 0;
-    margin: 0;
-    z-index: 4; }
-  .nav__content .nav__button {
-    max-width: 77%; }
 
 .nav__home {
   width: 39%;
@@ -131,14 +109,86 @@ a:visited {
     padding-left: 1.15rem;
     z-index: 4; }
 
+.nav__find {
+  border: 2px solid #1f59b1;
+  z-index: 4;
+  color: #1f59b1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0rem;
+  font-size: 0.90rem;
+  font-weight: 700;
+  text-decoration-style: none; }
+
+.nav__link {
+  margin-top: 1rem;
+  width: 5rem;
+  height: 3.25rem;
+  padding: 0;
+  margin: 0;
+  z-index: 4; }
+  .nav__link .nav__button {
+    max-width: 77%; }
+
 .banner__img {
   width: 80%;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   transform: scale(1.5); }
 
-.navigation__list a:hover {
-  color: #1fb19e; }
+.nav__menu {
+  top: 100%;
+  transition-property: all;
+  transition-duration: 0.75s;
+  overflow: hidden;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  position: absolute;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 100%;
+  height: 0px; }
+  .nav__menu .nav__close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-weight: 700;
+    color: #1fb19e;
+    font-size: 1.25rem; }
+    .nav__menu .nav__close a:visited {
+      color: #1fb19e; }
+  .nav__menu .nav__title {
+    color: #1f59b1;
+    padding: 1.75rem;
+    text-align: center;
+    font-weight: 700; }
+
+.nav__menu--open {
+  height: 270px !important;
+  border-top: 5px solid #1fb19e;
+  border-bottom: 5px solid #1fb19e; }
+
+.nav__list {
+  width: 100%; }
+  .nav__list li {
+    background-color: #e9e9e9;
+    color: #6a6c70 !important;
+    padding: 1rem;
+    margin-bottom: 2px;
+    position: relative; }
+    .nav__list li a:visited {
+      color: #696b6d; }
+  .nav__list li:last-child {
+    margin-bottom: 0; }
+  .nav__list li::after {
+    background-image: url(../images/next-arrow.png);
+    height: 24px;
+    width: 22px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -12px;
+    background-size: 20px;
+    background-repeat: no-repeat; }
 
 /* Filter Results Section --------------- */
 .filters {
@@ -300,57 +350,6 @@ a:visited {
   .footer__social img {
     width: auto;
     height: 1.5rem; }
-
-/* Mobile Drop Down ---------- */
-.nav__menu {
-  top: 100%;
-  transition-property: all;
-  transition-duration: 0.75s;
-  overflow: hidden;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  position: absolute;
-  z-index: 1;
-  background-color: #ffffff;
-  width: 100%;
-  border-top: 5px solid #1fb19e;
-  border-bottom: 5px solid #1fb19e; }
-  .nav__menu .nav__close {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-weight: 700;
-    color: #1fb19e;
-    font-size: 1.25rem; }
-    .nav__menu .nav__close a:visited {
-      color: #1fb19e; }
-  .nav__menu .nav__title {
-    color: #1f59b1;
-    padding: 1.75rem;
-    text-align: center;
-    font-weight: 700; }
-  .nav__menu .nav__list {
-    width: 100%; }
-    .nav__menu .nav__list li {
-      background-color: #e9e9e9;
-      color: #6a6c70 !important;
-      padding: 1rem;
-      margin-bottom: 2px;
-      position: relative; }
-      .nav__menu .nav__list li a:visited {
-        color: #696b6d; }
-    .nav__menu .nav__list li:last-child {
-      margin-bottom: 0; }
-    .nav__menu .nav__list li::after {
-      content: "";
-      background-image: url(../images/next-arrow.png);
-      height: 24px;
-      width: 22px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      margin-top: -12px;
-      background-size: 20px;
-      background-repeat: no-repeat; }
 
 /* Desktop Only ----- */
 .business__phone--desktop {
@@ -514,6 +513,9 @@ label.light {
     z-index: 9999;
     box-shadow: 0 1px 1px #888888;
     display: block; }
+
+  .navigation__list a:hover {
+    color: #1fb19e; }
 
   .navigation__desktop {
     display: flex;
