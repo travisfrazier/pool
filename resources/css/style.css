@@ -80,7 +80,8 @@ html {
   box-sizing: border-box;
   font-size: 16px; }
   html body {
-    font-family: "OpenSans", sans-serif; }
+    font-family: "OpenSans", sans-serif;
+    overflow: hidden; }
 
 a:link {
   text-decoration: none; }
@@ -305,6 +306,7 @@ a:visited {
   top: 100%;
   transition-property: all;
   transition-duration: 0.75s;
+  overflow: hidden;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   position: absolute;
   z-index: 1;
