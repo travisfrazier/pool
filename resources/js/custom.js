@@ -61,7 +61,13 @@ function closeMenu() {
     menu.classList.toggle('nav__menu--open');
 }
 
-// ----- filter service drop down ----- //
-$(".filters__mobile").click(function(e) {
-    $(".filters__form").slideToggle();
-});
+// ----- drop down filter menu ----- //
+document.querySelector('.filters__mobile').addEventListener('click', openFilter);
+
+// select filter 
+const filters = document.querySelector('.filters__form');
+
+// toggle filter form 
+function openFilter() {
+    filters.classList.toggle('filters__form--open');
+}

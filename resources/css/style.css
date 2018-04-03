@@ -141,8 +141,8 @@ a:visited {
   top: 100%;
   transition-property: all;
   transition-duration: 0.75s;
-  overflow: hidden;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  overflow: hidden;
   position: absolute;
   z-index: 1;
   background-color: #ffffff;
@@ -231,16 +231,23 @@ a:visited {
     color: black; }
 
 .filters__form {
+  height: 0px;
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   background-color: #ffffff;
   max-width: 85%;
-  margin: 1rem auto 0rem auto;
-  padding: 2rem 1rem 1rem 1rem;
-  display: none;
-  box-shadow: 0 0 2px 1px #b4b2b2; }
+  margin: 0 auto; }
   .filters__form .filters__input {
     margin-bottom: 1.5rem; }
   .filters__form .filters__label {
     padding-left: 7px; }
+
+.filters__form--open {
+  height: 150px !important;
+  padding: 1.5rem;
+  box-shadow: 0 0 2px 1px #b4b2b2; }
 
 /* Business Section ---------- */
 .business__container {
