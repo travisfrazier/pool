@@ -210,6 +210,7 @@ a:visited {
       padding: 1rem; }
 
 .filters__title {
+  background-color: #ffffff;
   border: 0.5px solid black;
   padding: 1rem; }
 
@@ -387,7 +388,7 @@ a:visited {
 .navigation {
   display: none; }
 
-.filters__desktop {
+.filters__title--desktop {
   display: none; }
 
 .top {
@@ -657,8 +658,9 @@ label.light {
   .filters__mobile {
     display: none; }
 
-  .filters__desktop {
-    display: inline; }
+  .filters__title--desktop {
+    display: inline;
+    margin-left: 1rem; }
 
   .filters__form form {
     display: inline-flex;
