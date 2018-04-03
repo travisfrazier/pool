@@ -3,8 +3,7 @@
 
   /* Main Section Desktop Styles ----- */
   .business__container {
-    @include flex-one;
-    flex-direction: row;
+    @include flex(space-between, center, row);
     padding: 2.5rem 1rem 1rem 1rem;
     width: 1250px;
     max-width: 100%;
@@ -30,7 +29,7 @@
     background-color: $color-light;
     color: black;
     .business__number--desktop {
-      @include flex-two;
+      @include flex(center, center, row);
     }
   }
 
@@ -76,7 +75,7 @@
   
 
   .navigation__desktop {
-    @include flex-one;
+    @include flex(space-between, center, row);
     height: 64px;
     max-width: 1250px;
     margin: 0 auto;
@@ -121,9 +120,8 @@
   } 
 
   .top__content {
+    @include flex(flex-end, stretch, row);
     max-width: 1250px;
-    display: flex;
-    justify-content: flex-end;
     color: $color-light;
     font-size: 0.75rem;
     margin: 0 auto;
@@ -134,9 +132,8 @@
   /* Filter Section ----- */
 
   .filters {
+    @include flex(flex-start, center, row);
     background-color: $color-background;
-    display: flex;
-    align-items: center;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     max-width: 960px;
@@ -146,7 +143,7 @@
   }
   
   .filters__head {
-    @include flex-one;
+    @include flex(space-between, center, row);
     max-width: 90%;
     margin: 0 auto;
     background-color: $color-background;
@@ -223,8 +220,7 @@
   }
   
   .footer__social {
-    display: flex;
-    justify-content: center;
+    @include flex(center, center, row);
     max-width: 90%;
     height: 3rem;
     margin: 0 auto;

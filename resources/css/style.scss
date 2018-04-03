@@ -19,15 +19,11 @@ $color-background: #f0eeee;
 @import 'fonts';
 
 // Mixins ------------------------//
-@mixin flex-one {
+@mixin flex($justify-content, $align-items, $flex-direction) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@mixin flex-two {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justify-content; // space-between
+  align-items: $align-items; // center
+  flex-direction: $flex-direction;
 }
 
 // Default styles ----------------------//
@@ -55,7 +51,7 @@ a {
   position: relative;
 }
 .nav__content {
-  @include flex-one;
+  @include flex(space-between, center, row);
   height: 60px;
   box-shadow: 0 1px 1px 1px #3a3d41;
   background-color: $color-light;
@@ -176,8 +172,7 @@ a {
   padding-bottom: 1rem;
   border-bottom: 0.5px solid #696b6d;
   .filters__head {
-    @include flex-one;
-    max-width: 90%;
+    @include flex(space-between, center, row);
     margin: 0 auto;
     span {
       padding: 1rem;
@@ -191,7 +186,7 @@ a {
 }
 
 .filters__mobile {
-  display: flex;
+  @include flex(flex-start, stretch, row);
   margin-right: 1rem;
   width: 9rem;
   background-color: $color-light;
@@ -216,8 +211,7 @@ a {
 
 /* Business Section ---------- */
 .business__container {
-  display: flex;
-  flex-direction: column;
+  @include flex(flex-start, stretch, column);
 }
 
 .business {
@@ -240,7 +234,7 @@ a {
 }
 
 .business__phone {
-  @include flex-one;
+  @include flex(space-between, center, row);
   background-color: $color-primary;
   color: $color-light;
   padding: 5px 0px 5px 5px;
@@ -264,14 +258,11 @@ a {
 }
 
 .business__contact {
-  @include flex-two;
+  @include flex(center, center, row);
   border-radius: 5px;
   margin: 0rem auto 1.5rem auto;
   border: 2px solid $color-secondary;
-  padding-top: 1rem;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0rem 1rem 0rem;
   max-width: 60%;
   &:hover {
     transform: scale(1.05);
@@ -298,7 +289,7 @@ a {
 }
 
 .business__services {
-  @include flex-two;
+  @include flex(center, center, row);
   background-color: #e7e6e6;
   padding-top: 1.5rem;
   padding-bottom: .5rem;
@@ -347,9 +338,7 @@ a {
 }
 
 .footer__social {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-between, center, row);
   max-width: 80%;
   height: 3rem;
   margin: 0 auto;
@@ -469,8 +458,7 @@ label.light {
 }
 
 .modal__button {
-  display: flex;
-  justify-content: flex-end;
+  @include flex(flex-end, stretch, row);
   .modal__submit {
     border: none;
     color: #29d4c6;

@@ -95,6 +95,7 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   height: 60px;
   box-shadow: 0 1px 1px 1px #3a3d41;
   background-color: #ffffff;
@@ -200,7 +201,7 @@ a:visited {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 90%;
+    flex-direction: row;
     margin: 0 auto; }
     .filters .filters__head span {
       padding: 1rem; }
@@ -211,6 +212,9 @@ a:visited {
 
 .filters__mobile {
   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
   margin-right: 1rem;
   width: 9rem;
   background-color: #ffffff;
@@ -232,6 +236,8 @@ a:visited {
 /* Business Section ---------- */
 .business__container {
   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-direction: column; }
 
 .business {
@@ -253,6 +259,7 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   background-color: #1f59b1;
   color: #ffffff;
   padding: 5px 0px 5px 5px;
@@ -274,13 +281,11 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   border-radius: 5px;
   margin: 0rem auto 1.5rem auto;
   border: 2px solid #1fb19e;
-  padding-top: 1rem;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0rem 1rem 0rem;
   max-width: 60%; }
   .business__contact:hover {
     transform: scale(1.05); }
@@ -303,6 +308,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background-color: #e7e6e6;
   padding-top: 1.5rem;
   padding-bottom: .5rem;
@@ -344,6 +350,7 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   max-width: 80%;
   height: 3rem;
   margin: 0 auto; }
@@ -444,7 +451,9 @@ label.light {
 
 .modal__button {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-direction: row; }
   .modal__button .modal__submit {
     border: none;
     color: #29d4c6;
@@ -483,7 +492,8 @@ label.light {
     .business__phone .business__number--desktop {
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      flex-direction: row; }
 
   .business__phone--desktop {
     display: block;
@@ -521,6 +531,7 @@ label.light {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     height: 64px;
     max-width: 1250px;
     margin: 0 auto; }
@@ -557,9 +568,11 @@ label.light {
       color: #f0eeee; }
 
   .top__content {
-    max-width: 1250px;
     display: flex;
     justify-content: flex-end;
+    align-items: stretch;
+    flex-direction: row;
+    max-width: 1250px;
     color: #ffffff;
     font-size: 0.75rem;
     margin: 0 auto;
@@ -568,9 +581,11 @@ label.light {
 
   /* Filter Section ----- */
   .filters {
-    background-color: #f0eeee;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: row;
+    background-color: #f0eeee;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     max-width: 960px;
@@ -582,6 +597,7 @@ label.light {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     max-width: 90%;
     margin: 0 auto;
     background-color: #f0eeee;
@@ -646,6 +662,8 @@ label.light {
   .footer__social {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     max-width: 90%;
     height: 3rem;
     margin: 0 auto; }
