@@ -226,7 +226,6 @@ a:visited {
   align-items: stretch;
   flex-direction: row;
   color: black;
-  margin-right: 1rem;
   padding: 1rem; }
   .filters__mobile:visited {
     color: black; }

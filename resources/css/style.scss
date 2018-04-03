@@ -158,7 +158,6 @@
 .filters__mobile {
   @include flex(flex-start, stretch, row);
   color: black;
-  margin-right: 1rem;
   padding: 1rem;
   &:visited {
     color: black;
