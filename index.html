@@ -98,8 +98,8 @@
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--one" href="#">
         <div class="business__contact">
-          <img src="./resources/images/email-icon.png">
-          <span>Contact this Pro</span>
+          <img class="business__img" src="./resources/images/email-icon.png">
+          <span class="business__pro">Contact this Pro</span>
         </div>
       </a>
       <div class="business__info">
@@ -144,8 +144,8 @@
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--two" href="#">
         <div class="business__contact">
-          <img src="./resources/images/email-icon.png">
-          <span>Contact this Pro</span>
+          <img class="business__img" src="./resources/images/email-icon.png">
+          <span class="business__pro">Contact this Pro</span>
         </div>
       </a>
       <div class="business__info">
@@ -176,7 +176,7 @@
     </div>
 
     <!-- Business 3 -->
-    <div class="business last pool-specialists">
+    <div class="business business--three">
       <h1 class="business__title">Carolina Pool Specialists</h1><br>
       <a class="business__call" href="tel:+1-888-888-8888">
         <div class="business__phone business__phone--mobile">
@@ -191,8 +191,8 @@
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--three" href="#">
         <div class="business__contact">
-          <img src="./resources/images/email-icon.png">
-          <span>Contact this Pro</span>
+          <img class="business__img" src="./resources/images/email-icon.png">
+          <span class="business__pro">Contact this Pro</span>
         </div>
       </a>
       <div class="business__info">
@@ -226,28 +226,30 @@
 <div class="modal">
   <div class="modal__content">
     <span class="modal__close">&times;</span>
-    <div class="modal__title">
-      <p>EMAIL</p>
+    <div class="modal__head">
+      <p class="modal__email">EMAIL</p>
       <h1 class="modal__title">Pool Pros</h1>
     </div>
     <form class="modal__form">
-      <legend><p class="modal__contact">Fill out the form below and a Pool Pro will get in touch.</p></legend>
+      <legend class="modal__legend"><p class="modal__contact">Fill out the form below and a Pool Pro will get in touch.</p></legend>
       <div class="modal__inputs">
         <fieldset>
-          <label>First and last name</label>
-          <input type="text" id="name" name="user_name">
-          <label>Phone Number</label>
-          <input type="text" id="number" name="user_number">
-          <label>Email Address</label>
-          <input type="email" id="mail" name="user_email">
+          <label class="modal__label">First and last name</label>
+          <input class="modal__input" type="text" id="name" name="user_name">
+          <label class="modal__label">Phone Number</label>
+          <input class="modal__input" type="text" id="number" name="user_number">
+          <label class="modal__label">Email Address</label>
+          <input class="modal__input" type="email" id="mail" name="user_email">
         </fieldset>
         <fieldset>
           <label>Comments or questions</label>
-          <textarea id="comment" name="user_comment"></textarea>
+          <textarea class="modal__textarea" id="comment" name="user_comment"></textarea>
           <div class="modal__question">
             <p class="modal__newsletter">Do you currently own a pool or spa?</p>
-            <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">Yes</label><br>
-            <input type="radio" id="question" value="answer_question" name="user_answer"><label class="light" for="news">No</label><br>
+            <div class="modal__radios">
+              <input class="modal__input--radio" type="radio" id="question" value="answer_question" name="user_answer"><label class="modal__light" for="news">Yes</label>
+              <input class="modal__input--radio" type="radio" id="question" value="answer_question" name="user_answer"><label class="modal__light" for="news">No</label>
+            </div>
           </div>
         </fieldset>
         <div class="modal__button">

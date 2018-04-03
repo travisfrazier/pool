@@ -52,11 +52,14 @@
   }
 }
 
-.banner__img {
-  width: 80%;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-  transform: scale(2);
+.banner {
+  overflow: hidden;
+  .banner__img {
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    transform: scale(2);
+  }
 }
 
 // Mobile drop down -------------------- //
@@ -250,12 +253,12 @@
   &:hover {
     transform: scale(1.05);
   }
-  span {
+  .business__pro {
     color: $color-primary;
     font-weight: $font-bold;
   }
-  img {
-    margin: 0rem 1rem 0rem 1rem;
+  .business__img {
+    margin-right: 1rem;
   }
 }
 
@@ -287,7 +290,7 @@
   }
 }
 
-.last {
+.business--three {
   margin-bottom: 2rem;
 }
 
@@ -300,7 +303,7 @@
 .footer--top {
   background-color: $color-primary;
   padding-top: 2rem;
-  padding-bottom: rem;
+  padding-bottom: 1rem;
   .footer__logo {
     width: 13rem;
   }
@@ -367,6 +370,7 @@
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
   .modal__content {
+    position: relative;
     background-color: #fefefe;
     margin: 15% auto; 
     border: 1px solid #888;
@@ -374,9 +378,19 @@
   }
 }
 
+.modal__legend {
+  margin-bottom: 1.5rem;
+}
+
+.modal__inputs {
+  @include font($font-m, $font-regular);
+}
+
 .modal__close {
+  position: absolute;
+  top: 1rem;
+  left: 20rem;
   color: #aaa;
-  float: right;
   font-size: $font-l;
   font-weight: $font-bold;
 }
@@ -391,17 +405,17 @@
 .modal__form {
   @include font($font-s, $font-regular);
   padding: 1rem;
-  label {
+  .modal__label {
     display: block;
     margin-bottom: 8px;
     padding-left: 0;
   }
-  legend {
+  .modal__legend {
     color: #696b6d;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  input {
+  .modal__input {
     @include font($font-m, $font-regular);
     height: 2.75rem;
     margin-bottom: 1rem;
@@ -410,7 +424,7 @@
     width: 100%;
     border: 1px solid #a5a7a8;
   }
-  textarea {
+  .modal__textarea {
     @include font($font-m, $font-regular);
     height: 3.25rem;
     margin-bottom: 1rem;
@@ -421,36 +435,44 @@
   }
 }
 
-.modal__title {
-  @include font($font-l, $font-regular);
-  background-color: $color-primary;
+.modal__head {
+  background-color: $color-dark;
   color: $color-light;
   padding: 1.30rem;
-  p {
+  .modal__email {
     @include font($font-s, $font-regular);
+    margin-bottom: 0.5rem;
+  }
+  .modal__title {
+    @include font($font-l, $font-light);
   }
 }
 
-label.light {
+.modal__light {
   @include font($font-xs, $font-regular);
-  display: inline;
+  display: inline !important;
 }
 
-.modal__question input {
-  width: 5% !important;
-  height: 1rem !important;
+.modal__question {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.modal__input--radio {
+  width: 5%;
+  height: 1rem;
   margin-bottom: 1rem;
 }
 
-.modal__question p {
+.modal__newsletter {
   text-align: left;
 }
 
 .modal__button {
   @include flex(flex-end, stretch, row);
+  background-color: $color-light;
   .modal__submit {
     @include font($font-l, $font-regular);
-    border: none;
     color: #29d4c6;
     font-size: $font-l;
     text-align: right;

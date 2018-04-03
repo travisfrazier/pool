@@ -131,11 +131,13 @@ a:visited {
   .nav__link .nav__button {
     max-width: 77%; }
 
-.banner__img {
-  width: 80%;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-  transform: scale(2); }
+.banner {
+  overflow: hidden; }
+  .banner .banner__img {
+    width: 80%;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    transform: scale(2); }
 
 .nav__menu {
   top: 100%;
@@ -310,11 +312,11 @@ a:visited {
   max-width: 60%; }
   .business__contact:hover {
     transform: scale(1.05); }
-  .business__contact span {
+  .business__contact .business__pro {
     color: #1f59b1;
     font-weight: 700; }
-  .business__contact img {
-    margin: 0rem 1rem 0rem 1rem; }
+  .business__contact .business__img {
+    margin-right: 1rem; }
 
 .business__info {
   margin-bottom: 1.5rem; }
@@ -341,7 +343,7 @@ a:visited {
     .business__services .business__service .business__service--hidden {
       visibility: hidden; }
 
-.last {
+.business--three {
   margin-bottom: 2rem; }
 
 /* Footer styles ---------- */
@@ -352,7 +354,7 @@ a:visited {
 .footer--top {
   background-color: #1f59b1;
   padding-top: 2rem;
-  padding-bottom: rem; }
+  padding-bottom: 1rem; }
   .footer--top .footer__logo {
     width: 13rem; }
 
@@ -413,14 +415,24 @@ a:visited {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4); }
   .modal .modal__content {
+    position: relative;
     background-color: #fefefe;
     margin: 15% auto;
     border: 1px solid #888;
     width: 85%; }
 
+.modal__legend {
+  margin-bottom: 1.5rem; }
+
+.modal__inputs {
+  font-size: 1rem;
+  font-weight: 400; }
+
 .modal__close {
+  position: absolute;
+  top: 1rem;
+  left: 20rem;
   color: #aaa;
-  float: right;
   font-size: 1.25rem;
   font-weight: 700; }
 
@@ -434,15 +446,15 @@ a:visited {
   font-size: 0.9rem;
   font-weight: 400;
   padding: 1rem; }
-  .modal__form label {
+  .modal__form .modal__label {
     display: block;
     margin-bottom: 8px;
     padding-left: 0; }
-  .modal__form legend {
+  .modal__form .modal__legend {
     color: #696b6d;
     padding-top: 1rem;
     padding-bottom: 1rem; }
-  .modal__form input {
+  .modal__form .modal__input {
     font-size: 1rem;
     font-weight: 400;
     height: 2.75rem;
@@ -451,7 +463,7 @@ a:visited {
     display: inline;
     width: 100%;
     border: 1px solid #a5a7a8; }
-  .modal__form textarea {
+  .modal__form .modal__textarea {
     font-size: 1rem;
     font-weight: 400;
     height: 3.25rem;
@@ -461,38 +473,44 @@ a:visited {
     width: 100%;
     border: 1px solid #a5a7a8; }
 
-.modal__title {
-  font-size: 1.25rem;
-  font-weight: 400;
-  background-color: #1f59b1;
+.modal__head {
+  background-color: #154080;
   color: #ffffff;
   padding: 1.30rem; }
-  .modal__title p {
+  .modal__head .modal__email {
     font-size: 0.9rem;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 0.5rem; }
+  .modal__head .modal__title {
+    font-size: 1.25rem;
+    font-weight: 200; }
 
-label.light {
+.modal__light {
   font-size: 0.75rem;
   font-weight: 400;
-  display: inline; }
+  display: inline !important; }
 
-.modal__question input {
-  width: 5% !important;
-  height: 1rem !important;
+.modal__question {
+  display: inline-flex;
+  flex-direction: column; }
+
+.modal__input--radio {
+  width: 5%;
+  height: 1rem;
   margin-bottom: 1rem; }
 
-.modal__question p {
+.modal__newsletter {
   text-align: left; }
 
 .modal__button {
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
-  flex-direction: row; }
+  flex-direction: row;
+  background-color: #ffffff; }
   .modal__button .modal__submit {
     font-size: 1.25rem;
     font-weight: 400;
-    border: none;
     color: #29d4c6;
     font-size: 1.25rem;
     text-align: right; }
