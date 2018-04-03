@@ -35,7 +35,7 @@
 
   .business__phone--desktop {
     display: block;
-    font-size: $l;
+    font-size: $font-l;
     border-top: 1px solid #999;
     padding-top: 1rem;
     border-radius: 0;
@@ -88,7 +88,7 @@
       padding: 0.75rem 1.25rem;
       border-radius: 5px;
       margin: 0rem 1rem 0rem 1rem;
-      font-size: $s;
+      font-size: $font-s;
       font-weight: $font-bold;
       text-decoration-style: none;
       &:hover {
@@ -127,7 +127,7 @@
     @include flex(flex-end, stretch, row);
     max-width: 1250px;
     color: $color-light;
-    font-size: $xs;
+    font-size: $font-xs;
     padding: 1rem 1.25rem 1rem 0rem;
     margin: 0 auto;
   }
@@ -209,31 +209,29 @@
   
   .footer--top {
     background-color: $color-primary;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.75rem;
   }
   
   .footer--bottom {
     background-color: $color-footer;
-    font-size: $xs;
+    font-size: $font-xs;
     padding-top: 1.25rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .footer__logo {
-    width: 15%;
+    padding-bottom: 1.25rem;
   }
   
   .footer__social {
     @include flex(center, center, row);
-    max-width: 90%;
-    height: 3rem;
-    margin: 0 auto;
-    img {
+    .footer__icons {
+      width: 7rem;
+      margin-left: 1rem;
+    }
+    .footer__img {
       max-height: 50%;
       margin-right: 10px;
     }
-    span {
-      font-weight: $font-light;
+    .footer__connect {
+      font-weight: $font-regular;
       margin-right: 1rem;
     }
   }

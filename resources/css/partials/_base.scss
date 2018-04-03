@@ -10,12 +10,12 @@ $font-italicLight: 200;
 $font-italic: 400;
 
 // Font-sizes 
-$xxs: 0.70rem;
-$xs: 0.75rem;
-$s: 0.90rem;
-$m: 1rem;
-$l: 1.25rem;
-$xl: 1.5rem;
+$font-xxs: 0.70rem;
+$font-xs: 0.75rem;
+$font-s: 0.90rem;
+$font-m: 1rem;
+$font-l: 1.25rem;
+$font-xl: 1.5rem;
 
 // Colors
 $color-primary: #1f59b1;
@@ -31,6 +31,11 @@ $color-background: #f0eeee;
   justify-content: $justify-content; // space-between
   align-items: $align-items; // center
   flex-direction: $flex-direction;
+}
+
+@mixin font($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
 }
 
 // Base Styles 

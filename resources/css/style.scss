@@ -35,7 +35,7 @@
   padding: 0.5rem;
   border-radius: 5px;
   margin: 0rem;
-  font-size: $s;
+  font-size: $font-s;
   font-weight: $font-bold;
   text-decoration-style: none;
 }
@@ -56,7 +56,7 @@
   width: 80%;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
-  transform: scale(1.5);
+  transform: scale(2);
 }
 
 // Mobile drop down -------------------- //
@@ -77,7 +77,7 @@
     top: 15px;
     font-weight: $font-bold;
     color: $color-secondary;
-    font-size: $l;
+    font-size: $font-l;
     a:visited {
       color: $color-secondary;
     }
@@ -182,11 +182,11 @@
   box-shadow: 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
   .business__title {
     margin-bottom: 1.5rem;
-    font-size: $xl;
+    font-size: $font-xl;
     font-weight: $font-light;
   }
   .business__time {
-    font-size: $s;
+    font-size: $font-s;
     margin-bottom: 1.5rem;
   }
   img {
@@ -203,10 +203,10 @@
   margin: 0rem auto 1.5rem auto;
   max-width: 80%;
   .business__call {
-    font-size: $xs;
+    font-size: $font-xs;
   }
   .business__number--desktop {
-    font-weight: $font-bold;
+    @include font($font-xl, $font-bold);
   }
   img, span {
     margin-right: 15px;
@@ -214,8 +214,9 @@
 }
 
 .business__talk {
+  @include font($font-s, $font-light);
+  font-style: italic;
   margin-bottom: 1.5rem !important;
-  font-style: $font-italic;
 }
 
 .business__contact {
@@ -254,7 +255,7 @@
   background-color: #e7e6e6;
   padding-top: 1.5rem;
   padding-bottom: .5rem;
-  font-size: $xs;
+  font-size: $font-xs;
   text-align: left;
   margin: 0 auto;
   .business__service {
@@ -273,28 +274,30 @@
 .footer__container {
   color: $color-light;
   text-align: center;
-  .footer--top {
-    background-color: $color-primary;
-    padding-top: 1.5rem;
-    .footer__logo {
-      max-width: 60%;
-      margin: auto;
-    }
+}
+
+.footer--top {
+  background-color: $color-primary;
+  padding-top: 2rem;
+  padding-bottom: rem;
+  .footer__logo {
+    width: 13rem;
   }
-  .footer--bottom {
-    background-color: #2e71d4;
-    font-size: $xs;
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-    p {
-      font-weight: $font-light;
-    }
-    .footer__text {
-      border-bottom: 1px solid $color-light;
-      max-width: 90%;
-      margin: 0 auto 7px auto;
-      padding-bottom: 7px;
-    }
+}
+
+.footer--bottom {
+  background-color: #2e71d4;
+  font-size: $font-xs;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+  p {
+    font-weight: $font-light;
+  }
+  .footer__text {
+    border-bottom: 1px solid $color-light;
+    max-width: 90%;
+    margin: 0 auto 7px auto;
+    padding-bottom: 7px;
   }
 }
 
@@ -303,7 +306,11 @@
   max-width: 80%;
   height: 3rem;
   margin: 0 auto;
-  img {
+  .footer__icons {
+    @include flex(space-between, center, row);
+    width: 6rem;
+  }
+  .footer__img {
     width: auto;
     height: 1.5rem;
   }
@@ -349,7 +356,7 @@
 .modal__close {
   color: #aaa;
   float: right;
-  font-size: $l;
+  font-size: $font-l;
   font-weight: $font-bold;
 }
 
@@ -361,8 +368,8 @@
 }
 
 .modal__form {
+  @include font($font-s, $font-regular);
   padding: 1rem;
-  font-size: $s;
   label {
     display: block;
     margin-bottom: 8px;
@@ -374,38 +381,38 @@
     padding-bottom: 1rem;
   }
   input {
+    @include font($font-m, $font-regular);
     height: 2.75rem;
     margin-bottom: 1rem;
     background-color: $color-light;
     display: inline;
     width: 100%;
     border: 1px solid #a5a7a8;
-    font-size: $m;
   }
   textarea {
+    @include font($font-m, $font-regular);
     height: 3.25rem;
     margin-bottom: 1rem;
     background-color: $color-light;
     display: inline;
     width: 100%;
     border: 1px solid #a5a7a8;
-    font-size: $m;
   }
 }
 
 .modal__title {
+  @include font($font-l, $font-regular);
   background-color: $color-primary;
   color: $color-light;
-  font-size: $l;
   padding: 1.30rem;
   p {
-    font-size: $s;
+    @include font($font-s, $font-regular);
   }
 }
 
 label.light {
+  @include font($font-xs, $font-regular);
   display: inline;
-  font-size: $xs;
 }
 
 .modal__question input {
@@ -421,9 +428,10 @@ label.light {
 .modal__button {
   @include flex(flex-end, stretch, row);
   .modal__submit {
+    @include font($font-l, $font-regular);
     border: none;
     color: #29d4c6;
-    font-size: $l;
+    font-size: $font-l;
     text-align: right;
   }
 }
