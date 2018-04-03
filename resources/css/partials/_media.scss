@@ -49,12 +49,14 @@
   }
 
   /* Navigation and Header Desktop Styles ----- */
-  .banner__img {
-    padding-top: 0.1rem;
-    transform: scale(1);
-    width: 100%;
-    height: auto;
-    margin-bottom: -5.5rem;
+  .banner {
+    .banner__img {
+      padding-top: 0.1rem;
+      transform: scale(1);
+      width: 100%;
+      height: auto;
+      margin-bottom: -5.5rem;
+    }
   }
 
   .nav {
@@ -137,8 +139,6 @@
   .filters {
     @include flex(flex-start, center, row);
     background-color: $color-background;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
     max-width: 960px;
     margin: 0 auto;
     border: none;
