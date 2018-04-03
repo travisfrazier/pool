@@ -203,27 +203,36 @@ a:visited {
     align-items: center;
     flex-direction: row;
     margin: 0 auto; }
-    .filters .filters__head span {
-      padding: 1rem; }
     .filters .filters__head .filters__result {
       color: #1f59b1;
       font-weight: 900;
-      margin-right: 0rem; }
+      margin-right: 0rem;
+      padding: 1rem; }
+
+.filters__title {
+  border: 0.5px solid black;
+  padding: 1rem; }
+
+.filters__arrow {
+  border-top: 0.5px solid black;
+  border-right: 0.5px solid black;
+  border-bottom: 0.5px solid black;
+  padding: 1rem; }
 
 .filters__mobile {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: row;
+  color: black;
   margin-right: 1rem;
-  width: 9rem;
-  background-color: #ffffff;
-  padding: 1rem;
-  box-shadow: 0 0 2px 1px #b4b2b2; }
+  padding: 1rem; }
+  .filters__mobile:visited {
+    color: black; }
 
 .filters__form {
   background-color: #ffffff;
-  max-width: 90%;
+  max-width: 85%;
   margin: 1rem auto 0rem auto;
   padding: 2rem 1rem 1rem 1rem;
   display: none;
