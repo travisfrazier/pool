@@ -35,7 +35,7 @@
 
   .business__phone--desktop {
     display: block;
-    font-size: 1.5rem;
+    font-size: $l;
     border-top: 1px solid #999;
     padding-top: 1rem;
     border-radius: 0;
@@ -49,10 +49,12 @@
   }
 
   /* Navigation and Header Desktop Styles ----- */
-  .banner img {
+  .banner__img {
+    padding-top: 0.1rem;
     transform: scale(1);
     width: 100%;
-    margin-bottom: 0rem;
+    height: auto;
+    margin-bottom: -5.5rem;
   }
 
   .nav {
@@ -68,6 +70,7 @@
   }
 
   .navigation__list {
+    font-weight: $font-bold;
     a:hover {
       color: $color-secondary;
     }
@@ -76,16 +79,16 @@
 
   .navigation__desktop {
     @include flex(space-between, center, row);
-    height: 64px;
+    height: 100px;
     max-width: 1250px;
     margin: 0 auto;
     .navigation__find {
       border: 2px solid $color-primary;
       color: $color-primary;
-      padding: 0.5rem;
+      padding: 0.75rem 1.25rem;
       border-radius: 5px;
       margin: 0rem 1rem 0rem 1rem;
-      font-size: 0.90rem;
+      font-size: $s;
       font-weight: $font-bold;
       text-decoration-style: none;
       &:hover {
@@ -102,14 +105,15 @@
 
   .site__logo--desktop {
     max-width: 18%;
+    margin-left: 1.25rem;
   }
 
   .top {
-    background-color: $color-primary;
+    background-color: $color-dark;
     display: block;
   }
 
-  .top ul li {
+  .top__item {
     list-style-type: none;
     display: inline;
     margin: 1rem;
@@ -123,10 +127,9 @@
     @include flex(flex-end, stretch, row);
     max-width: 1250px;
     color: $color-light;
-    font-size: 0.75rem;
+    font-size: $xs;
+    padding: 1rem 1.25rem 1rem 0rem;
     margin: 0 auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   /* Filter Section ----- */
@@ -140,6 +143,8 @@
     margin: 0 auto;
     border: none;
     border-radius: 10px;
+    position: relative;
+    z-index: 3;
   }
   
   .filters__head {
@@ -202,21 +207,20 @@
     text-align: center;
   }
   
-  .footer--ltop {
+  .footer--top {
     background-color: $color-primary;
     padding-top: 1.5rem;
   }
   
   .footer--bottom {
     background-color: $color-footer;
-    font-size: 0.80rem;
+    font-size: $xs;
     padding-top: 1.25rem;
     padding-bottom: 0.5rem;
   }
   
   .footer__logo {
-    max-width: 15%;
-    margin: auto;
+    width: 15%;
   }
   
   .footer__social {

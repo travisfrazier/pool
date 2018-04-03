@@ -1,0 +1,54 @@
+// Global Variables ---------- //
+
+// Font-weights
+$font-family-primary: 'OpenSans', sans-serif;
+$font-bold: 700;
+$font-regular: 400;
+$font-light: 200;
+$font-extraBold: 900;
+$font-italicLight: 200;
+$font-italic: 400;
+
+// Font-sizes 
+$xxs: 0.70rem;
+$xs: 0.75rem;
+$s: 0.90rem;
+$m: 1rem;
+$l: 1.25rem;
+$xl: 1.5rem;
+
+// Colors
+$color-primary: #1f59b1;
+$color-secondary: #1fb19e;
+$color-dark: #154080;
+$color-footer: #2e71d4;
+$color-light: #ffffff;
+$color-background: #f0eeee;
+
+// Global Mixins
+@mixin flex($justify-content, $align-items, $flex-direction) {
+  display: flex;
+  justify-content: $justify-content; // space-between
+  align-items: $align-items; // center
+  flex-direction: $flex-direction;
+}
+
+// Base Styles 
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  body {
+    font-family: $font-family-primary;
+    overflow-x: hidden;
+  }
+}
+
+a {
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}

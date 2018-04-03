@@ -1,50 +1,9 @@
-// Variables 
-$font-family-primary: 'OpenSans', sans-serif;
-$font-bold: 700;
-$font-regular: 400;
-$font-light: 200;
-$font-extraBold: 900;
-$font-italicLight: 200;
-$font-italic: 400;
-
-$color-primary: #1f59b1;
-$color-secondary: #1fb19e;
-$color-footer: #2e71d4;
-$color-light: #ffffff;
-$color-background: #f0eeee;
-
 // Reset CSS
-@import 'reset';
+@import 'partials/reset';
+// Base import 
+@import 'partials/base';
 // Font import
-@import 'fonts';
-
-// Mixins ------------------------//
-@mixin flex($justify-content, $align-items, $flex-direction) {
-  display: flex;
-  justify-content: $justify-content; // space-between
-  align-items: $align-items; // center
-  flex-direction: $flex-direction;
-}
-
-// Default styles ----------------------//
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  body {
-    font-family: $font-family-primary;
-    overflow-x: hidden;
-  }
-}
-
-a {
-  &:link {
-    text-decoration: none;
-  }
-  &:visited {
-    text-decoration: none;
-    color: $color-primary;
-  }
-}
+@import 'partials/fonts';
 
 // Header and navigation styles --------//
 .nav {
@@ -76,7 +35,7 @@ a {
   padding: 0.5rem;
   border-radius: 5px;
   margin: 0rem;
-  font-size: 0.90rem;
+  font-size: $s;
   font-weight: $font-bold;
   text-decoration-style: none;
 }
@@ -118,7 +77,7 @@ a {
     top: 15px;
     font-weight: $font-bold;
     color: $color-secondary;
-    font-size: 1.25rem;
+    font-size: $l;
     a:visited {
       color: $color-secondary;
     }
@@ -212,6 +171,7 @@ a {
 /* Business Section ---------- */
 .business__container {
   @include flex(flex-start, stretch, column);
+  max-width: 1250px;
 }
 
 .business {
@@ -222,10 +182,11 @@ a {
   box-shadow: 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
   .business__title {
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: $xl;
+    font-weight: $font-light;
   }
   .business__time {
-    font-size: 0.85rem;
+    font-size: $s;
     margin-bottom: 1.5rem;
   }
   img {
@@ -242,7 +203,7 @@ a {
   margin: 0rem auto 1.5rem auto;
   max-width: 80%;
   .business__call {
-    font-size: 0.75rem;
+    font-size: $xs;
   }
   .business__number--desktop {
     font-weight: $font-bold;
@@ -293,7 +254,7 @@ a {
   background-color: #e7e6e6;
   padding-top: 1.5rem;
   padding-bottom: .5rem;
-  font-size: 0.75rem;
+  font-size: $xs;
   text-align: left;
   margin: 0 auto;
   .business__service {
@@ -315,14 +276,14 @@ a {
   .footer--top {
     background-color: $color-primary;
     padding-top: 1.5rem;
-    img {
+    .footer__logo {
       max-width: 60%;
       margin: auto;
     }
   }
   .footer--bottom {
     background-color: #2e71d4;
-    font-size: 0.80rem;
+    font-size: $xs;
     padding-top: 1.25rem;
     padding-bottom: 1rem;
     p {
@@ -388,7 +349,7 @@ a {
 .modal__close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: $l;
   font-weight: $font-bold;
 }
 
@@ -401,7 +362,7 @@ a {
 
 .modal__form {
   padding: 1rem;
-  font-size: 0.85rem;
+  font-size: $s;
   label {
     display: block;
     margin-bottom: 8px;
@@ -419,7 +380,7 @@ a {
     display: inline;
     width: 100%;
     border: 1px solid #a5a7a8;
-    font-size: 1rem;
+    font-size: $m;
   }
   textarea {
     height: 3.25rem;
@@ -428,23 +389,23 @@ a {
     display: inline;
     width: 100%;
     border: 1px solid #a5a7a8;
-    font-size: 1rem;
+    font-size: $m;
   }
 }
 
 .modal__title {
   background-color: $color-primary;
   color: $color-light;
-  font-size: 1.25rem;
+  font-size: $l;
   padding: 1.30rem;
   p {
-    font-size: 0.7rem;
+    font-size: $s;
   }
 }
 
 label.light {
   display: inline;
-  font-size: 0.80rem;
+  font-size: $xs;
 }
 
 .modal__question input {
@@ -462,11 +423,10 @@ label.light {
   .modal__submit {
     border: none;
     color: #29d4c6;
-    font-size: 1.25rem;
+    font-size: $l;
     text-align: right;
-    font-size: 1rem;
   }
 }
 
 // Media query style sheets ----- //
-@import 'media';
+@import 'partials/media';
