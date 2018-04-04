@@ -157,7 +157,7 @@ button, input[type="submit"], input[type="reset"] {
     margin-bottom: 0.75rem;
     height: 2.70rem;
     background-color: #ffffff;
-    width: 100%;
+    width: 95%;
     border: 0.75px solid #b5b8b9; }
   .modal__form .modal__textarea {
     font-size: 1rem;
@@ -165,7 +165,7 @@ button, input[type="submit"], input[type="reset"] {
     height: 3.25rem;
     margin-bottom: 1rem;
     background-color: #ffffff;
-    width: 100%;
+    width: 95%;
     border: 0.75px solid #a5a7a8; }
 
 .modal__head {
@@ -234,6 +234,12 @@ button, input[type="submit"], input[type="reset"] {
     background-color: #eeebeb;
     padding: 1.5rem; }
 
+  .modal__input {
+    width: 100%; }
+
+  .modal__textarea {
+    width: 100%; }
+
   .modal__submit {
     display: none; }
 
@@ -253,6 +259,7 @@ button, input[type="submit"], input[type="reset"] {
     display: inline-flex; }
 
   .modal__arrow {
+    display: inline;
     width: auto;
     height: 1rem;
     margin-left: 0.25rem; } }
