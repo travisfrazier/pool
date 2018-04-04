@@ -419,10 +419,8 @@
   .modal__input {
     @include font($font-m, $font-regular);
     height: 2.70rem;
-    margin: 0rem auto 1rem auto;
     background-color: $color-light;
-    display: inline;
-    width: 100%;
+    width: 90%;
     border: 0.75px solid #b5b8b9;
   }
   .modal__textarea {
@@ -430,9 +428,8 @@
     height: 3.25rem;
     margin-bottom: 1rem;
     background-color: $color-light;
-    display: inline;
-    width: 100%;
-    border: 1px solid #a5a7a8;
+    width: 90%;
+    border: 0.75px solid #a5a7a8;
   }
 }
 
