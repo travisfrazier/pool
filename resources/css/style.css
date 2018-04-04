@@ -445,8 +445,10 @@ a:visited {
 .modal__form {
   font-size: 0.9rem;
   font-weight: 400;
-  padding: 1rem; }
+  padding: 1.5rem; }
   .modal__form .modal__label {
+    font-size: 0.9rem;
+    font-weight: 400;
     display: block;
     margin-bottom: 8px;
     padding-left: 0; }

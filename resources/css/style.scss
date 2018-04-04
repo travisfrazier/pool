@@ -404,8 +404,9 @@
 
 .modal__form {
   @include font($font-s, $font-regular);
-  padding: 1rem;
+  padding: 1.5rem;
   .modal__label {
+    @include font($font-s, $font-regular);
     display: block;
     margin-bottom: 8px;
     padding-left: 0;
