@@ -349,18 +349,20 @@ button, input[type="submit"], input[type="reset"] {
     padding: 1rem;
     margin-bottom: 2px;
     position: relative; }
-    .nav__list .nav__li li::after {
-      background-image: url("../images/next-arrow.png");
-      height: 24px;
-      width: 22px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      margin-top: -12px;
-      background-size: 20px;
-      background-repeat: no-repeat; }
     .nav__list .nav__li a:visited {
       color: #696b6d; }
+
+.nav__list .nav__li::after {
+  content: "";
+  background-image: url(../images/next-arrow.png);
+  height: 24px;
+  width: 22px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -12px;
+  background-size: 20px;
+  background-repeat: no-repeat; }
 
 /* Filter Results Section --------------- */
 .filters {
@@ -660,7 +662,7 @@ button, input[type="submit"], input[type="reset"] {
     height: 100px;
     margin: 0 auto;
     width: 100%;
-    z-index: 9999;
+    z-index: 9;
     display: block; }
     .nav .nav__li--dk {
       display: inline;
@@ -711,6 +713,9 @@ button, input[type="submit"], input[type="reset"] {
 
   .nav__close, .nav__title--mobile, .nav__link--mobile, .nav__find {
     display: none; }
+
+  .nav__list .nav__li::after {
+    background-image: none; }
 
   .top {
     background-color: #154080;

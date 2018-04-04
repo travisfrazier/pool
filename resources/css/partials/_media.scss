@@ -104,7 +104,7 @@
     height: 100px;
     margin: 0 auto;
     width: 100%;  
-    z-index: 9999;   
+    z-index: 9;   
     display: block;
     .nav__li--dk {
       display: inline;
@@ -161,6 +161,10 @@
   // Mobile only navigation ----- //
   .nav__close, .nav__title--mobile, .nav__link--mobile, .nav__find {
     display: none;
+  }
+
+  .nav__list .nav__li::after {
+    background-image: none;
   }
   // Nav end ----- //
 

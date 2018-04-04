@@ -105,21 +105,23 @@
     padding: 1rem;
     margin-bottom: 2px;
     position: relative;
-    li::after {
-      background-image: url("../images/next-arrow.png");
-      height: 24px;
-      width: 22px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      margin-top: -12px;
-      background-size: 20px;
-      background-repeat: no-repeat;
-    }
     a:visited { 
       color: #696b6d;
     }
   }
+}
+
+.nav__list .nav__li::after {
+  content: "";
+  background-image: url(../images/next-arrow.png);
+  height: 24px;
+  width: 22px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -12px;
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 
 /* Filter Results Section --------------- */
