@@ -15,11 +15,11 @@
     background-color: #fefefe;
     margin: 15% auto; 
     border: 1px solid #888;
-    width: 85%; 
+    width: 350px; 
   }
 }
 
-.modal__legend {
+.modal__contact {
   margin-bottom: 1.5rem;
 }
 
@@ -29,8 +29,8 @@
 
 .modal__close {
   position: absolute;
-  top: 1rem;
-  left: 18rem;
+  top: 0.6rem;
+  left: 20.3rem;
   color: #aaa;
   font-size: $font-l;
   font-weight: $font-bold;
@@ -59,9 +59,10 @@
   }
   .modal__input {
     @include font($font-m, $font-regular);
+    margin-bottom: 0.75rem;
     height: 2.70rem;
     background-color: $color-light;
-    width: 90%;
+    width: 100%;
     border: 0.75px solid #b5b8b9;
   }
   .modal__textarea {
@@ -69,7 +70,7 @@
     height: 3.25rem;
     margin-bottom: 1rem;
     background-color: $color-light;
-    width: 90%;
+    width: 100%;
     border: 0.75px solid #a5a7a8;
   }
 }
@@ -106,7 +107,7 @@
 .modal__input--num {
   @include font($font-m, $font-regular);
     height: 2.70rem;
-    margin: 0rem auto 1rem auto;
+    margin-bottom: 0.75rem;
     background-color: $color-light;
     border: 0.75px solid #b5b8b9;
     width: 45%;
@@ -117,21 +118,24 @@
   text-align: left;
 }
 
-.modal__button {
-  @include flex(flex-end, stretch, row);
-  .modal__submit {
-    @include font($font-l, $font-regular);
-    color: #29d4c6;
-    font-size: $font-l;
-    text-align: right;
-  }
+.modal__submit[type=submit] {
+  color: #29d4c6;
+  float: right;
+}
+
+.modal__submit--desktop {
+  display: none;
+}
+
+.modal__arrow {
+  display: none;
 }
 
 // Desktop Modal Styles 
 @media screen and (min-width: 768px) {
   .modal {
     .modal__content {
-      width: 50%;
+      width: 600px;
     }
     .modal__head {
       padding: 2.3rem;
@@ -141,11 +145,31 @@
     }
     .modal__close {
       color: $color-light;
-      left: 37rem;
+      top: 0.6rem;
+      left: 36rem;
     }
   }
   .modal__inputs {
     background-color: #eeebeb;
     padding: 1.5rem;
+  }
+  .modal__submit {
+    display: none;
+  }
+  .modal__submit--desktop[type=submit] {
+    @include font($font-s, $font-regular);
+    display: block;
+    margin: 0 auto;
+  }
+  .modal__desktop {
+    @include flex(center, center, row);
+  }
+  .modal__submit--container {
+    display: inline-flex;
+  }
+  .modal__arrow {
+    width: auto;
+    height: 1rem;
+    margin-left: 0.25rem;
   }
 }

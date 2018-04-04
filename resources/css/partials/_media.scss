@@ -247,25 +247,4 @@
   .footer__text {
     display: none;
   }
-
-  .modal {
-    .modal__content {
-      width: 50%;
-    }
-    .modal__head {
-      padding: 2.3rem;
-    }
-    .modal__form {
-      padding: 2rem;
-    }
-    .modal__close {
-      color: $color-light;
-      left: 37rem;
-    }
-  }
-
-  .modal__inputs {
-    background-color: #eeebeb;
-    padding: 1.5rem;
-  }
 }
