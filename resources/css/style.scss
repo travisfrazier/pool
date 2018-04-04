@@ -389,7 +389,7 @@
 .modal__close {
   position: absolute;
   top: 1rem;
-  left: 20rem;
+  left: 18rem;
   color: #aaa;
   font-size: $font-l;
   font-weight: $font-bold;
@@ -418,7 +418,7 @@
   }
   .modal__input {
     @include font($font-m, $font-regular);
-    height: 2.75rem;
+    height: 2.70rem;
     margin: 0rem auto 1rem auto;
     background-color: $color-light;
     display: inline;
@@ -465,6 +465,15 @@
   margin-bottom: 1rem;
 }
 
+.modal__input--num {
+  @include font($font-m, $font-regular);
+    height: 2.70rem;
+    margin: 0rem auto 1rem auto;
+    background-color: $color-light;
+    border: 0.75px solid #b5b8b9;
+    width: 45%;
+}
+
 .modal__newsletter {
   @include font($font-s, $font-regular);
   text-align: left;
@@ -472,7 +481,6 @@
 
 .modal__button {
   @include flex(flex-end, stretch, row);
-  background-color: white;
   .modal__submit {
     @include font($font-l, $font-regular);
     color: #29d4c6;
