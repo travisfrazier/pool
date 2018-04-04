@@ -41,7 +41,7 @@ function closeModal() {
 
 
 // Mobile Navigation drop down ----- //
-document.querySelector('.nav__link').addEventListener('click', openMenu);
+document.querySelector('.nav__link--mobile').addEventListener('click', openMenu);
 document.querySelector('.nav__close').addEventListener('click', closeMenu);
 
 const menu = document.querySelector('.nav__menu');

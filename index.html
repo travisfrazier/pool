@@ -11,55 +11,49 @@
   <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+  
+  <!-- Top -->
+  <div class="top">
+    <div class="top__content">
+      <ul class="top__list">
+        <a href="http://www.hudsonpooldist.com/" target="_blank"><li class="top__item">Dealers and Distributors</li></a>
+        <a href="http://americanpool.com/services/pool-maintenance-services/" target="_blank"><li class="top__item">Commercial Service</li></a>
+      </ul>
+    </div>
+  </div>
 
   <!-- Banner and Navigation -->
   <header>
     <nav class="nav">
-      <div class="nav__content">
-      <a class="nav__home" href="#">
-        <img class="nav__logo" src="./resources/images/pool-pros-logo.png">
-      </a>
-      <span class="nav__find ss-location"><a href="#main">FIND A PRO</a></span>
-      <a class="nav__link" href="#">
-        <img class="nav__button" src="./resources/images/menu-icon-mobile.png">
-      </a>
-      </div>
-      <div class="nav__menu">
-        <a href="#" class="nav__close">X</a>
-        <h3 class="nav__title">MENU</h3>
-        <ul class="nav__list">
-          <li><a href="#">Pools &amp; Spas</a></li>
-          <li><a href="#">Supplies</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Services</a></li>
-        </ul>
+      <div class="nav__container">
+        <div class="nav__content">
+          <img class="nav__logo" src="./resources/images/pool-pros-logo.png">
+          <a href="#main"><span class="nav__find ss-location">FIND A PRO</span></a>
+          <a class="nav__link--mobile" href="#">
+            <img class="nav__button" src="./resources/images/menu-icon-mobile.png">
+          </a>
+        </div>
+        <div class="nav__menu">
+          <a href="#" class="nav__close">X</a>
+          <h3 class="nav__title--mobile">MENU</h3>
+          <ul class="nav__list">
+            <li class="nav__li"><a href="#">Pools &amp; Spas</a></li>
+            <li class="nav__li"><a href="#">Supplies</a></li>
+            <li class="nav__li"><a href="#">Resources</a></li>
+            <li class="nav__li nav__li--last"><a href="#">Services</a></li>
+            <li class="nav__li nav__li--dk"><a href="#main">
+              <span class="nav__find--dk ss-location">Find a Pool Pro</span>
+            </a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div class="top">
-      <div class="top__content">
-        <ul class="top__list">
-          <a href="http://www.hudsonpooldist.com/" target="_blank"><li class="top__item">Dealers and Distributors</li></a>
-          <a href="http://americanpool.com/services/pool-maintenance-services/" target="_blank"><li class="top__item">Commercial Service</li></a>
-        </ul>
-      </div>
-    </div>
-    <nav class="navigation">
-      <div class="navigation__desktop">
-        <img class="site__logo--desktop" src="./resources/images/pool-pros-logo.png">
-        <ul class="navigation__list">
-          <li><a href="#">Pools &amp; Spas</a></li>
-          <li><a href="#">Supplies</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#main">
-            <span class="navigation__find ss-location">Find a Pool Pro</span>
-          </a></li>
-        </ul>
-    </nav>
-    <div class="banner">
-      <img class="banner__img" src="./resources/images/water-image.png">
-    </div>
   </header>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <!-- <img class="banner__img" src="./resources/images/water-image.png"> -->
+  </div>
 
   <!-- Filter Result Section -->
   <section class="filters">
@@ -288,5 +282,6 @@
   <!-- JavaScript -->
   <script src="./resources/js/main.js"></script>
   <script src="./resources/js/ss-pika.js"></script>
+  
 </body>
 </html>

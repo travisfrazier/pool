@@ -4,8 +4,13 @@
   .nav__find {
     @include font($font-l, $font-regular);
   }
-  .nav__link {
+
+  .nav__link--mobile {
     width: 6rem;
+  }
+
+  .nav__logo {
+    width: 18rem;
   }
 
   // Filters section 
@@ -14,6 +19,7 @@
       @include flex(space-around, center, row);
     }
   }
+
   .business__phone {
     max-width: 60%;
     .business__call {
@@ -23,6 +29,7 @@
       font-size: $font-l;
     }
   }
+
   .business__contact {
     max-width: 50%;
   }
@@ -32,9 +39,10 @@
     justify-content: space-around;
   }
 }
+//------------------------------------- End Tablet 
 
-// Media query for desktop view
-@media screen and (min-width: 846px) {
+// Media query for desktop view ---------- //
+@media screen and (min-width: 904px) {
 
   /* Main Section Desktop Styles ----- */
   .business__container {
@@ -83,67 +91,81 @@
     border-bottom-right-radius: 10px;
   }
 
-  /* Navigation and Header Desktop Styles ----- */
   .banner {
-    .banner__img {
-      padding-top: 0.1rem;
-      transform: scale(1);
-      width: 100%;
-      height: auto;
-      margin-bottom: -5.5rem;
-    }
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
   }
 
+  // Navigation styles ----- //
   .nav {
-    display: none;
-    position: relative;
-  }
-
-  .navigation {
-    width: 100%;  
-    z-index: 9999;   
-    box-shadow: 0 1px 1px #888888;
-    display: block;
-  }
-
-  .navigation__list {
-    font-weight: $font-bold;
-    a:hover {
-      color: $color-secondary;
-    }
-  }
-  
-
-  .navigation__desktop {
     @include flex(space-between, center, row);
     height: 100px;
-    max-width: 1250px;
     margin: 0 auto;
-    .navigation__find {
-      border: 2px solid $color-primary;
-      color: $color-primary;
-      padding: 0.75rem 1.25rem;
-      border-radius: 5px;
-      margin: 0rem 1rem 0rem 1rem;
-      font-size: $font-s;
-      font-weight: $font-bold;
-      text-decoration-style: none;
-      &:hover {
+    width: 100%;  
+    z-index: 9999;   
+    display: block;
+    .nav__li--dk {
+      display: inline;
+      margin-top: 0;
+    }
+    .nav__li {
+      background-color: $color-light;
+      display: inline;
+      a:visited {
+        color: $color-primary;
+      }
+      a:hover {
         color: $color-secondary;
       }
     }
+    .nav__menu {
+      @include flex(center, center, row);
+      height: 100%;
+      width: auto;
+      position: static;
+    }
   }
 
-  .navigation__desktop ul li {
-    list-style-type: none;
-    display: inline;
-    margin: 1rem;
+  .nav__list {
+    @include font($font-m, $font-bold);
   }
 
-  .site__logo--desktop {
-    max-width: 18%;
-    margin-left: 1.25rem;
+  .nav__find--dk {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    margin: 0rem 1rem 0rem 1rem;
+    text-decoration-style: none;
+    &:hover {
+      color: $color-secondary;
+    }
   }
+
+  .nav__container {
+    @include flex(space-between, center, row);
+    height: 100px;
+    margin: 0 auto;
+    max-width: 1250px;
+  }
+
+  .nav__content {
+    box-shadow: none;
+    .nav__logo {
+      width: 14rem;
+    }
+  }
+
+  // Mobile only navigation ----- //
+  .nav__close, .nav__title--mobile, .nav__link--mobile, .nav__find {
+    display: none;
+  }
+  // Nav end ----- //
+
+
+  // Top content ----- //
 
   .top {
     background-color: $color-dark;
@@ -168,13 +190,13 @@
     padding: 1rem 1.25rem 1rem 0rem;
     margin: 0 auto;
   }
+  // Top content end ----- //
 
   /* Filter Section ----- */
-
   .filters {
     @include flex(flex-start, center, row);
     background-color: $color-background;
-    max-width: 960px;
+    max-width: 1245px;
     margin: 0 auto;
     border: none;
     border-radius: 10px;
@@ -235,6 +257,7 @@
     border-right: 1px solid #a3a5a883;
     padding-right: 2rem;
   }
+  // Filter end ----- //
 
 
   /* Footer Styles ----- */
