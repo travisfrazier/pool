@@ -277,7 +277,7 @@
 }
 
 .business__services {
-  @include flex(center, center, row);
+  @include flex(space-around, center, row);
   background-color: #e7e6e6;
   padding-top: 1.5rem;
   padding-bottom: .5rem;

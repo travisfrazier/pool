@@ -116,7 +116,7 @@ button, input[type="submit"], input[type="reset"] {
     border: 1px solid #888;
     width: 350px; }
 
-.modal__contact {
+.modal__action {
   margin-bottom: 1.5rem; }
 
 .modal__inputs {
@@ -157,7 +157,7 @@ button, input[type="submit"], input[type="reset"] {
     margin-bottom: 0.75rem;
     height: 2.70rem;
     background-color: #ffffff;
-    width: 95%;
+    width: 100%;
     border: 0.75px solid #b5b8b9; }
   .modal__form .modal__textarea {
     font-size: 1rem;
@@ -165,7 +165,7 @@ button, input[type="submit"], input[type="reset"] {
     height: 3.25rem;
     margin-bottom: 1rem;
     background-color: #ffffff;
-    width: 95%;
+    width: 100%;
     border: 0.75px solid #a5a7a8; }
 
 .modal__head {
@@ -176,7 +176,7 @@ button, input[type="submit"], input[type="reset"] {
     font-size: 0.9rem;
     font-weight: 400;
     margin-bottom: 0.5rem; }
-  .modal__head .modal__title {
+  .modal__head .modal__business {
     font-size: 1.25rem;
     font-weight: 200; }
 
@@ -218,7 +218,7 @@ button, input[type="submit"], input[type="reset"] {
 .modal__arrow {
   display: none; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 846px) {
   .modal .modal__content {
     width: 600px; }
   .modal .modal__head {
@@ -504,7 +504,7 @@ button, input[type="submit"], input[type="reset"] {
 
 .business__services {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   background-color: #e7e6e6;
@@ -577,8 +577,33 @@ button, input[type="submit"], input[type="reset"] {
 .top {
   display: none; }
 
-/* Media Query for Desktop View ----- */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
+  .nav__find {
+    font-size: 1.25rem;
+    font-weight: 400; }
+
+  .nav__link {
+    width: 6rem; }
+
+  .filters .filters__head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row; }
+
+  .business__phone {
+    max-width: 60%; }
+    .business__phone .business__call {
+      font-size: 1rem; }
+    .business__phone .business__number {
+      font-size: 1.25rem; }
+
+  .business__contact {
+    max-width: 50%; }
+
+  .footer__social {
+    justify-content: space-around; } }
+@media screen and (min-width: 846px) {
   /* Main Section Desktop Styles ----- */
   .business__container {
     display: flex;

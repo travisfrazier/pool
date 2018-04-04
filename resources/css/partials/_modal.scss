@@ -19,7 +19,7 @@
   }
 }
 
-.modal__contact {
+.modal__action {
   margin-bottom: 1.5rem;
 }
 
@@ -62,7 +62,7 @@
     margin-bottom: 0.75rem;
     height: 2.70rem;
     background-color: $color-light;
-    width: 95%;
+    width: 100%;
     border: 0.75px solid #b5b8b9;
   }
   .modal__textarea {
@@ -70,7 +70,7 @@
     height: 3.25rem;
     margin-bottom: 1rem;
     background-color: $color-light;
-    width: 95%;
+    width: 100%;
     border: 0.75px solid #a5a7a8;
   }
 }
@@ -83,7 +83,7 @@
     @include font($font-s, $font-regular);
     margin-bottom: 0.5rem;
   }
-  .modal__title {
+  .modal__business {
     @include font($font-l, $font-light);
   }
 }
@@ -132,7 +132,7 @@
 }
 
 // Desktop Modal Styles 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 846px) {
   .modal {
     .modal__content {
       width: 600px;
