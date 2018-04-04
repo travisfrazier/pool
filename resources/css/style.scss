@@ -4,6 +4,8 @@
 @import 'partials/base';
 // Font import
 @import 'partials/fonts';
+// Modal import 
+@import 'modal.scss';
 
 // Header and navigation styles --------//
 .nav {
@@ -355,135 +357,6 @@
 
 .top {
   display: none;
-}
-
-/* Modal Styles ---------- */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-  .modal__content {
-    position: relative;
-    background-color: #fefefe;
-    margin: 15% auto; 
-    border: 1px solid #888;
-    width: 85%; 
-  }
-}
-
-.modal__legend {
-  margin-bottom: 1.5rem;
-}
-
-.modal__inputs {
-  @include font($font-m, $font-regular);
-}
-
-.modal__close {
-  position: absolute;
-  top: 1rem;
-  left: 18rem;
-  color: #aaa;
-  font-size: $font-l;
-  font-weight: $font-bold;
-}
-
-.modal__close:hover,
-.modal__close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal__form {
-  @include font($font-s, $font-regular);
-  padding: 1rem;
-  .modal__label {
-    @include font($font-s, $font-regular);
-    display: block;
-    margin-bottom: 8px;
-    padding-left: 0;
-  }
-  .modal__legend {
-    color: #696b6d;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  .modal__input {
-    @include font($font-m, $font-regular);
-    height: 2.70rem;
-    background-color: $color-light;
-    width: 90%;
-    border: 0.75px solid #b5b8b9;
-  }
-  .modal__textarea {
-    @include font($font-m, $font-regular);
-    height: 3.25rem;
-    margin-bottom: 1rem;
-    background-color: $color-light;
-    width: 90%;
-    border: 0.75px solid #a5a7a8;
-  }
-}
-
-.modal__head {
-  background-color: $color-dark;
-  color: $color-light;
-  padding: 1.30rem;
-  .modal__email {
-    @include font($font-s, $font-regular);
-    margin-bottom: 0.5rem;
-  }
-  .modal__title {
-    @include font($font-l, $font-light);
-  }
-}
-
-.modal__light {
-  @include font($font-xs, $font-regular);
-  display: inline !important;
-}
-
-.modal__question {
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.modal__input--radio {
-  width: 5%;
-  height: 1rem;
-  margin-bottom: 1rem;
-}
-
-.modal__input--num {
-  @include font($font-m, $font-regular);
-    height: 2.70rem;
-    margin: 0rem auto 1rem auto;
-    background-color: $color-light;
-    border: 0.75px solid #b5b8b9;
-    width: 45%;
-}
-
-.modal__newsletter {
-  @include font($font-s, $font-regular);
-  text-align: left;
-}
-
-.modal__button {
-  @include flex(flex-end, stretch, row);
-  .modal__submit {
-    @include font($font-l, $font-regular);
-    color: #29d4c6;
-    font-size: $font-l;
-    text-align: right;
-  }
 }
 
 // Media query style sheets ----- //
