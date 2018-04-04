@@ -404,7 +404,7 @@
 
 .modal__form {
   @include font($font-s, $font-regular);
-  padding: 1.5rem;
+  padding: 1rem;
   .modal__label {
     @include font($font-s, $font-regular);
     display: block;
@@ -419,11 +419,11 @@
   .modal__input {
     @include font($font-m, $font-regular);
     height: 2.75rem;
-    margin-bottom: 1rem;
+    margin: 0rem auto 1rem auto;
     background-color: $color-light;
     display: inline;
     width: 100%;
-    border: 1px solid #a5a7a8;
+    border: 0.75px solid #b5b8b9;
   }
   .modal__textarea {
     @include font($font-m, $font-regular);
@@ -466,12 +466,13 @@
 }
 
 .modal__newsletter {
+  @include font($font-s, $font-regular);
   text-align: left;
 }
 
 .modal__button {
   @include flex(flex-end, stretch, row);
-  background-color: $color-light;
+  background-color: white;
   .modal__submit {
     @include font($font-l, $font-regular);
     color: #29d4c6;

@@ -445,7 +445,7 @@ a:visited {
 .modal__form {
   font-size: 0.9rem;
   font-weight: 400;
-  padding: 1.5rem; }
+  padding: 1rem; }
   .modal__form .modal__label {
     font-size: 0.9rem;
     font-weight: 400;
@@ -460,11 +460,11 @@ a:visited {
     font-size: 1rem;
     font-weight: 400;
     height: 2.75rem;
-    margin-bottom: 1rem;
+    margin: 0rem auto 1rem auto;
     background-color: #ffffff;
     display: inline;
     width: 100%;
-    border: 1px solid #a5a7a8; }
+    border: 0.75px solid #b5b8b9; }
   .modal__form .modal__textarea {
     font-size: 1rem;
     font-weight: 400;
@@ -502,6 +502,8 @@ a:visited {
   margin-bottom: 1rem; }
 
 .modal__newsletter {
+  font-size: 0.9rem;
+  font-weight: 400;
   text-align: left; }
 
 .modal__button {
@@ -509,7 +511,7 @@ a:visited {
   justify-content: flex-end;
   align-items: stretch;
   flex-direction: row;
-  background-color: #ffffff; }
+  background-color: white; }
   .modal__button .modal__submit {
     font-size: 1.25rem;
     font-weight: 400;
