@@ -31,21 +31,21 @@
 .modal__circle--one {
   width: 1.25rem;
   position: absolute;
-  top: 0rem;
+  top: -.15rem;
   right: 0rem;
 }
 
 .modal__circle--two {
   width: 1.25rem;
   position: absolute;
-  top: 5rem;
+  top: 5.35rem;
   right: 11rem;
 }
 
 .modal__circle--three {
   width: 1.25rem;
   position: absolute;
-  top: 10rem;
+  top: 10.9rem;
   right: 0rem;
 }
 
@@ -81,7 +81,7 @@
   }
   .modal__input {
     @include font($font-m, $font-regular);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     height: 2.70rem;
     background-color: $color-light;
     width: 100%;
@@ -90,7 +90,7 @@
   .modal__textarea {
     @include font($font-m, $font-regular);
     height: 3.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     background-color: $color-light;
     width: 100%;
     border: 0.75px solid #a5a7a8;
@@ -129,7 +129,7 @@
 .modal__input--num {
   @include font($font-m, $font-regular);
     height: 2.70rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     background-color: $color-light;
     border: 0.75px solid #b5b8b9;
     width: 45%;
@@ -202,16 +202,16 @@
     margin-left: 0.25rem;
   }
   .modal__circle--one {
-    top: 1.5rem;
+    top: 1.34rem;
     right: 1.5rem;
   }
   
   .modal__circle--two {
-    top: 6.5rem;
+    top: 6.85rem;
     right: 18.3rem;
   }
   .modal__circle--three {
-    top: 11.5rem;
+    top: 12.4rem;
     right: 1.5rem;
   }
 }

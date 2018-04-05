@@ -123,4 +123,3 @@ function formValidate() {
 }
 
 // Code to submit to server goes here
-
