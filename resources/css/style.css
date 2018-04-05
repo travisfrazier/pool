@@ -142,6 +142,17 @@ button, input[type="submit"], input[type="reset"] {
   top: 10.9rem;
   right: 0rem; }
 
+.modal__opt {
+  font-size: 0.75rem;
+  font-weight: 200;
+  font-style: italic;
+  position: absolute;
+  right: 0rem;
+  top: 16.95rem; }
+
+.modal__opt--dk {
+  display: none; }
+
 .modal__close {
   position: absolute;
   top: 0.6rem;
@@ -181,7 +192,7 @@ button, input[type="submit"], input[type="reset"] {
   .modal__form .modal__textarea {
     font-size: 1rem;
     font-weight: 400;
-    height: 3.25rem;
+    height: 4rem;
     margin-bottom: 1.25rem;
     background-color: #ffffff;
     width: 100%;
@@ -293,7 +304,20 @@ button, input[type="submit"], input[type="reset"] {
 
   .modal__circle--three {
     top: 12.4rem;
-    right: 1.5rem; } }
+    right: 1.5rem; }
+
+  .modal__opt {
+    right: 1.5rem;
+    top: 18.5rem; }
+
+  .modal__opt--dk {
+    font-size: 0.75rem;
+    font-weight: 200;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 25.25rem; } }
 .nav__li--dk {
   display: none; }
 
@@ -357,10 +381,10 @@ button, input[type="submit"], input[type="reset"] {
     right: 20px;
     top: 15px;
     font-weight: 700;
-    color: #1fb19e;
+    color: #2bcece;
     font-size: 1.25rem; }
     .nav__menu .nav__close a:visited {
-      color: #1fb19e; }
+      color: #2bcece; }
   .nav__menu .nav__title--mobile {
     color: #1f59b1;
     padding: 1.75rem;
@@ -369,8 +393,8 @@ button, input[type="submit"], input[type="reset"] {
 
 .nav__menu--open {
   height: 270px !important;
-  border-top: 5px solid #1fb19e;
-  border-bottom: 5px solid #1fb19e; }
+  border-top: 5px solid #2bcece;
+  border-bottom: 5px solid #2bcece; }
 
 .nav__list {
   width: 100%; }
@@ -704,7 +728,7 @@ button, input[type="submit"], input[type="reset"] {
       .nav .nav__li a:visited {
         color: #1f59b1; }
       .nav .nav__li a:hover {
-        color: #1fb19e; }
+        color: #2bcece; }
     .nav .nav__menu {
       display: flex;
       justify-content: center;
@@ -726,7 +750,7 @@ button, input[type="submit"], input[type="reset"] {
     margin: 0rem 1rem 0rem 1rem;
     text-decoration-style: none; }
     .nav__find--dk:hover {
-      color: #1fb19e; }
+      color: #2bcece; }
 
   .nav__container {
     display: flex;

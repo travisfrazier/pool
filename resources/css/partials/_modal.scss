@@ -49,6 +49,18 @@
   right: 0rem;
 }
 
+.modal__opt {
+  @include font($font-xs, $font-light);
+  font-style: italic;
+  position: absolute;
+  right: 0rem;
+  top: 16.95rem;
+}
+
+.modal__opt--dk {
+  display: none;
+}
+
 .modal__close {
   position: absolute;
   top: 0.6rem;
@@ -89,7 +101,7 @@
   }
   .modal__textarea {
     @include font($font-m, $font-regular);
-    height: 3.25rem;
+    height: 4rem;
     margin-bottom: 1.25rem;
     background-color: $color-light;
     width: 100%;
@@ -213,5 +225,18 @@
   .modal__circle--three {
     top: 12.4rem;
     right: 1.5rem;
+  }
+  .modal__opt {
+    right: 1.5rem;
+    top: 18.5rem;
+  }
+  
+  .modal__opt--dk {
+    @include font($font-xs, $font-light);
+    font-style: italic;
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 25.25rem;
   }
 }
