@@ -83,14 +83,14 @@ function imgValidate() {
     }
 
     //Number imagle circle
-    if (inputNum.length < 9) {
+    if (inputNum.length < 10) {
         imgNum.setAttribute('src', 'resources/images/circle-form.png');
     } else {
         imgNum.setAttribute('src', 'resources/images/checkmark-circle.png');
     }
 
     //Email image circle
-    if (!inputEmail) {
+    if (!inputEmail.includes('@')) {
         imgEmail.setAttribute('src', 'resources/images/circle-form.png');
     } else {
         imgEmail.setAttribute('src', 'resources/images/checkmark-circle.png');
