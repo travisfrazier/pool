@@ -65,35 +65,62 @@ function openFilter() {
     filters.classList.toggle('filters__form--open');
 }
 
-// Contact Form Validation ---------- // 
+
+// Image Form Validation ---------- // 
 function imgValidate() {
-    //Name
     const inputName = document.querySelector('.modal__input--name').value.trim();
     const imgName = document.querySelector('.modal__circle--one');
-
-    if (!inputName) {
-        imgName.setAttribute('src', 'resources/images/circle-form.png');
-    } else {
-        imgName.setAttribute('src', 'resources/images/checkmark-circle.png');
-    }
-
-    //Number
     const inputNum = document.querySelector('.modal__input--num').value.trim();
     const imgNum = document.querySelector('.modal__circle--two'); 
-
-    if (inputNum.length > 9) {
-        imgNum.setAttribute('src', 'resources/images/checkmark-circle.png');
-    } else {
-        imgNum.setAttribute('src', 'resources/images/circle-form.png');
-    }
-
-    //Email 
     const inputEmail = document.querySelector('.modal__input--email').value.trim();
     const imgEmail = document.querySelector('.modal__circle--three');
 
+    //Name image circle
+    if (!inputName) {
+        imgName.setAttribute('src', 'resources/images/circle-form.png');
+    } else {
+         imgName.setAttribute('src', 'resources/images/checkmark-circle.png');
+    }
+
+    //Number imagle circle
+    if (inputNum.length < 9) {
+        imgNum.setAttribute('src', 'resources/images/circle-form.png');
+    } else {
+        imgNum.setAttribute('src', 'resources/images/checkmark-circle.png');
+    }
+
+    //Email image circle
     if (!inputEmail) {
         imgEmail.setAttribute('src', 'resources/images/circle-form.png');
     } else {
         imgEmail.setAttribute('src', 'resources/images/checkmark-circle.png');
     }
+
 }
+
+function formValidate() {
+    const name = document.querySelector('.modal__input--name').value.trim();
+    const number = document.querySelector('.modal__input--num').value.trim();
+    const email = document.querySelector('.modal__input--email').value.trim();
+
+    //Name
+    if (!name) {
+      alert('Please enter your name');
+      return false;
+    }
+
+    //Number 
+    if (number < 9) {
+        alert('Please enter your number');
+        return false;
+    }
+
+    //Email 
+    if (!email) {
+        alert('Please enter your email');
+        return false;
+    }
+}
+
+// Code to submit to server goes here
+
