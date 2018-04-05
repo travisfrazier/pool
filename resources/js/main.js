@@ -64,3 +64,36 @@ const filters = document.querySelector('.filters__form');
 function openFilter() {
     filters.classList.toggle('filters__form--open');
 }
+
+// Contact Form Validation ---------- // 
+function imgValidate() {
+    //Name
+    const inputName = document.querySelector('.modal__input--name').value.trim();
+    const imgName = document.querySelector('.modal__circle--one');
+
+    if (!inputName) {
+        imgName.setAttribute('src', 'resources/images/circle-form.png');
+    } else {
+        imgName.setAttribute('src', 'resources/images/checkmark-circle.png');
+    }
+
+    //Number
+    const inputNum = document.querySelector('.modal__input--num').value.trim();
+    const imgNum = document.querySelector('.modal__circle--two'); 
+
+    if (inputNum.length > 9) {
+        imgNum.setAttribute('src', 'resources/images/checkmark-circle.png');
+    } else {
+        imgNum.setAttribute('src', 'resources/images/circle-form.png');
+    }
+
+    //Email 
+    const inputEmail = document.querySelector('.modal__input--email').value.trim();
+    const imgEmail = document.querySelector('.modal__circle--three');
+
+    if (!inputEmail) {
+        imgEmail.setAttribute('src', 'resources/images/circle-form.png');
+    } else {
+        imgEmail.setAttribute('src', 'resources/images/checkmark-circle.png');
+    }
+}
