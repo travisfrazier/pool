@@ -343,20 +343,20 @@ input[type="radio"]:checked + label span {
   .modal__light--top {
     margin-right: -0.75rem; }
 
-  input[type="radio"] + label span {
+  .modal__input--radio[type="radio"] + label span {
     display: inline-block;
-    width: auto;
+    width: 4rem;
     height: auto;
     border: 1px solid #b4b1b1;
     border-radius: 5px; }
 
-  input[type="radio"]:checked + label span {
+  .modal__input--radio[type="radio"]:checked + label span {
     background-color: #2bcece;
     color: #ffffff;
     border: 1px solid #b4b1b1; } }
 .nav__container {
   position: relative;
-  box-shadow: 0 2px 1px 1px #5c5a5a; }
+  box-shadow: 0 2px 1px 1px #696b6d; }
 
 .nav__content {
   display: flex;
@@ -771,9 +771,6 @@ input[type="radio"]:checked + label span {
       justify-content: center;
       align-items: center;
       flex-direction: row;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
       border: 2px solid #2f77e2;
       color: #2f77e2;
       padding: 0.75rem 1.25rem;

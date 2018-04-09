@@ -24,7 +24,7 @@ function openModalTwo() {
     modal.style.display = 'block';
 }
 
-// Modal 3
+// Modal 3 ----- //
 document.querySelector('.business__email--three').addEventListener('click', openModalThree);
 document.querySelector('.modal__close').addEventListener('click', closeModal);
 

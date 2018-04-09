@@ -286,15 +286,15 @@
       margin-right: -0.75rem;
     }
   }
-  input[type="radio"] + label span {
+  .modal__input--radio[type="radio"] + label span {
     display:inline-block;
-    width: auto;
+    width: 4rem;
     height: auto;
     border: 1px solid #b4b1b1;
     border-radius: 5px;
     //padding: 1rem 2rem;
   }
-  input[type="radio"]:checked + label span {
+  .modal__input--radio[type="radio"]:checked + label span {
     background-color: #2bcece;
     color: $color-light;
     border: 1px solid #b4b1b1;

@@ -2,6 +2,8 @@
 @import 'partials/reset';
 // Base import 
 @import 'partials/base';
+// Inputs import 
+@import 'partials/inputs';
 // Font import
 @import 'partials/fonts';
 // Modal import 
@@ -10,7 +12,7 @@
 // ----- Nav section start ----- //
 .nav__container {
   position: relative;
-  box-shadow: 0 2px 1px 1px rgb(92, 90, 90);
+  box-shadow: 0 2px 1px 1px $color-shadow;
 }
 .nav {
 
