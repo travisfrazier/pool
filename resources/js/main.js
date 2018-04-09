@@ -98,28 +98,29 @@ function imgValidate() {
 
 }
 
-function formValidate() {
-    const name = document.querySelector('.modal__input--name').value.trim();
-    const number = document.querySelector('.modal__input--num').value.trim();
-    const email = document.querySelector('.modal__input--email').value.trim();
+// Added required in the HTML inputs for these instead of running this script
+// function formValidate() {
+//     const name = document.querySelector('.modal__input--name').value.trim();
+//     const number = document.querySelector('.modal__input--num').value.trim();
+//     const email = document.querySelector('.modal__input--email').value.trim();
 
-    //Name
-    if (!name) {
-      alert('Please enter your name');
-      return false;
-    }
+//     //Name
+//     if (!name) {
+//       alert('Please enter your name');
+//       return false;
+//     }
 
-    //Number 
-    if (number < 9) {
-        alert('Please enter your number');
-        return false;
-    }
+//     //Number 
+//     if (number < 9) {
+//         alert('Please enter your number');
+//         return false;
+//     }
 
-    //Email 
-    if (!email) {
-        alert('Please enter your email');
-        return false;
-    }
-}
+//     //Email 
+//     if (!email) {
+//         alert('Please enter your email');
+//         return false;
+//     }
+// }
 
 // Code to submit to server goes here

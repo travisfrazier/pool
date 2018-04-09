@@ -7,99 +7,68 @@
 // Modal import 
 @import 'partials/modal';
 
-// Header and navigation styles --------//
-.nav__li--dk {
-  display: none;
-}
-.nav {
+// ----- Nav section start ----- //
+.nav__container {
   position: relative;
   box-shadow: 0 2px 1px 1px rgb(92, 90, 90);
 }
-.nav__content {
-  @include flex(space-between, center, row);
-  height: 60px;
-  background-color: $color-light;
-}
+.nav {
 
+  &__content {
+    @include flex(space-between, center, row);
+    height: 60px;
+    background-color: $color-light;
+  }
 
-.nav__logo {
-  width: 9rem;
-  padding-left: 1.15rem;
-}
+  &__logo {
+    width: 9rem;
+    padding-left: 1.15rem;
+  }
 
+  &__find {
+    @include inline-flex(center, center, row);
+    border: 2px solid $color-primary;
+    z-index: 4;
+    color: $color-primary;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0rem;
+    font-size: $font-s;
+    font-weight: $font-bold;
+    text-decoration-style: none;
+  }
 
-.nav__find {
-  border: 2px solid $color-primary;
-  z-index: 4;
-  color: $color-primary;
-  padding: 0.5rem;
-  border-radius: 5px;
-  margin: 0rem;
-  font-size: $font-s;
-  font-weight: $font-bold;
-  text-decoration-style: none;
-}
+  &__location {
+    width: 0.75rem;
+    margin-right: 0.15rem;
+  }
 
-.nav__link--mobile {
-  margin-top: 1rem;
-  width: 5rem;
-  height: 3.25rem;
-  padding: 0;
-  margin: 0;
-  z-index: 4;
-  .nav__button {
+  &__button {
     max-width: 77%;
   }
-}
 
-.banner {
-  background-image: url("../images/water-image.png");
-  height: 100px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-// Mobile drop down -------------------- //
-.nav__menu {
-  top: 100%;
-  transition-property: all;
-  transition-duration: 0.75s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  background-color: $color-light;
-  width: 100%;
-  height: 0px;
-  .nav__close{
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-weight: $font-bold;
-    color: $color-secondary;
-    font-size: $font-l;
-    a:visited {
-      color: $color-secondary;
+  &__li--dk {
+    display: none;
+  }
+  
+  &__list {
+    width: 100%;
+    //Mobile menu arrows
+    .nav__li::after {
+      content: "";
+      background-image: url(../images/next-arrow.png);
+      height: 24px;
+      width: 22px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -12px;
+      background-size: 20px;
+      background-repeat: no-repeat;
     }
   }
-  .nav__title--mobile {
-    color: $color-primary;
-    padding: 1.75rem;
-    text-align: center;
-    font-weight: $font-bold;
-  }
-}
-// Open toggle class for JS
-.nav__menu--open {
-  height: 270px !important;
-  border-top: 5px solid $color-secondary;
-  border-bottom: 5px solid $color-secondary;
-}
 
-.nav__list {
-  width: 100%;
-  .nav__li {
+  &__li {
     background-color: #e9e9e9;
     color: #6a6c70;
     padding: 1rem;
@@ -109,87 +78,154 @@
       color: #696b6d;
     }
   }
-}
+  
+  //Mobile drop down start
+  &__menu {
+    top: 100%;
+    transition-property: all;
+    transition-duration: 0.75s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: $color-light;
+    width: 100%;
+    height: 0px;
+  }
 
-.nav__list .nav__li::after {
-  content: "";
-  background-image: url(../images/next-arrow.png);
-  height: 24px;
-  width: 22px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -12px;
-  background-size: 20px;
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-weight: $font-bold;
+    color: $color-secondary;
+    font-size: $font-l;
+    &:visited {
+      color: $color-secondary;
+    }
+  }
+
+  &__link--mobile {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 3.25rem;
+    padding: 0;
+    margin: 0;
+    z-index: 4;
+  }
+
+  &__title--mobile {
+    color: $color-primary;
+    padding: 1.75rem;
+    text-align: center;
+    font-weight: $font-bold;
+  }
+
+  &__menu--open {
+    height: 280px !important;
+    border-top: 5px solid $color-secondary;
+    border-bottom: 5px solid $color-secondary;
+  }
+  //Mobile drop down end
+}
+//----- Nav section end -----//
+
+//----- Banner section start -----//
+.banner {
+  background-image: url("../images/water-image.png");
+  height: 100px;
+  background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
 }
+// ----- Banner section end -----//
 
-/* Filter Results Section --------------- */
+//----- Filter section start -----//
 .filters {
+  @include flex(center, center, column);
   background-color: $color-background;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 0.5px solid #696b6d;
-  .filters__head {
+  border-bottom: 0.5px solid $color-border;
+
+  &__head {
     @include flex(space-between, center, row);
+    @include font($font-s, $font-bold);
     margin: 0 auto;
-    .filters__result {
-      color: $color-primary;
-      font-weight: $font-extraBold;
-      margin-right: 0rem;
-      padding: 1rem;
+  }
+  
+  &__result {
+    color: $color-bright;
+    margin-right: 0rem;
+    padding: 1rem;
+  }
+
+  &__title {
+    background-color: $color-light;
+    border: 1.25px solid $color-border;
+    padding: 1rem;
+  }
+
+  &__arrow {
+    border-top: 1.25px solid $color-border;
+    border-right: 1.25px solid $color-border;
+    border-bottom: 1.25px solid $color-border;
+    padding: 1rem;
+  }
+
+  &__mobile {
+    @include flex(flex-start, stretch, row);
+    color: $color-black;
+    padding: 1rem;
+    &:visited {
+      color: $color-black;
     }
   }
-}
 
-.filters__title {
-  background-color: $color-light;
-  border: 0.5px solid black;
-  padding: 1rem;
-}
+  &__form {
+    @include flex(flex-start, flex-start, column);
+    height: 0px;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 0.75s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    background-color: $color-light;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -1.1rem;
+  }
 
-.filters__arrow {
-  border-top: 0.5px solid black;
-  border-right: 0.5px solid black;
-  border-bottom: 0.5px solid black;
-  padding: 1rem;
-}
+  &__input {
+    margin-bottom: 1rem;
+  }
 
-.filters__mobile {
-  @include flex(flex-start, stretch, row);
-  color: black;
-  padding: 1rem;
-  &:visited {
-    color: black;
+  &__label {
+    @include font($font-s, $font-regular);
+    @include flex(center, center, row);
+  }
+
+  &__check {
+    margin-right: 0.75rem;
+  }
+
+  &__question {
+    position: relative;
+    bottom: 1.3rem;
+    left: 8rem;
+    width: 1.5rem;
+  }
+  //Open class for filter drop down
+  &__form--open {
+    height: 240px !important;
+    position: relative;
+    padding-left: 1rem;
+    //box-shadow: 0 0 2px 1px rgb(180, 178, 178);
+    border: 1.25px solid $color-border;
   }
 }
+//----- Filter end -----//
 
-.filters__form {
-  height: 0px;
-  overflow: hidden;
-  transition-property: all;
-  transition-duration: 0.75s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  background-color: $color-light;
-  max-width: 85%;
-  margin: 0 auto;
-  //padding: 2rem 1rem 1rem 1rem;
-  .filters__input {
-    margin-bottom: 1.5rem;
-  }
-  .filters__label {
-    padding-left: 7px;
-  }
-}
-
-.filters__form--open {
-  height: 150px !important;
-  //margin: 0 auto;
-  padding: 1.5rem;
-  box-shadow: 0 0 2px 1px rgb(180, 178, 178);
-}
-
-/* Business Section ---------- */
+//----- Business section start -----//
 .business__container {
   @include flex(flex-start, stretch, column);
   max-width: 1250px;
@@ -201,148 +237,176 @@
   width: 90%;
   margin: auto;
   box-shadow: 3px 3px 3px -3px #999, 3px 3px 3px -3px #999, -3px 3px 3px -3px #999;
-  .business__title {
+
+  &__title {
+    @include font($font-xl, $font-light);
     margin-bottom: 1.5rem;
-    font-size: $font-xl;
-    font-weight: $font-light;
   }
-  .business__time {
+
+  &__time {
     font-size: $font-s;
     margin-bottom: 1.5rem;
   }
-  img {
+  
+  &__image {
     width: 12%;
   }
-}
 
-.business__phone {
-  @include flex(space-between, center, row);
-  background-color: $color-primary;
-  color: $color-light;
-  padding: 5px 0px 5px 5px;
-  border-radius: 5px;
-  margin: 0rem auto 1.5rem auto;
-  max-width: 80%;
-  .business__call {
+  &__phone {
+    @include flex(space-between, center, row);
+    background-color: $color-primary;
+    color: $color-light;
+    padding: 5px 0px 5px 5px;
+    border-radius: 5px;
+    margin: 0rem auto 1.5rem auto;
+    max-width: 80%;
+  }
+
+  &__tap {
     font-size: $font-xs;
   }
-  .business__number--desktop {
-    @include font($font-xl, $font-bold);
-  }
-  img, span {
+
+  &__number {
+    @include font($font-m, $font-regular);
     margin-right: 15px;
   }
-}
 
-.business__talk {
-  @include font($font-s, $font-light);
-  font-style: italic;
-  margin-bottom: 1.5rem !important;
-}
-
-.business__contact {
-  @include flex(center, center, row);
-  border-radius: 5px;
-  margin: 0rem auto 1.5rem auto;
-  border: 2px solid $color-secondary;
-  padding: 1rem 0rem 1rem 0rem;
-  max-width: 60%;
-  &:hover {
-    transform: scale(1.05);
+  &__image--num {
+    margin-right: 15px;
   }
-  .business__pro {
+
+  &__talk {
+    @include font($font-talk, $font-light);
+    font-style: italic;
+    margin-bottom: 1.5rem !important;
+  }
+
+  &__contact {
+    @include flex(center, center, row);
+    border-radius: 5px;
+    margin: 0rem auto 2.5rem auto;
+    border: 2px solid $color-secondary;
+    padding: 1rem 0rem 1rem 0rem;
+    max-width: 60%;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__pro {
     color: $color-primary;
     font-weight: $font-bold;
   }
-  .business__img {
-    margin-right: 1rem;
-  }
-}
 
-.business__info {
-  margin-bottom: 1.5rem;
-  .business__hours {
+  &__img {
+    margin-right: 1rem;
+    width: 9%;
+  }
+
+  &__hours {
     font-weight: $font-bold;
     margin-bottom: 0.75rem;
   }
-  .business__time {
+
+  &__time {
     margin-top: 0;
     margin-bottom: 0.75rem;
   }
-}
 
-.business__services {
-  @include flex(space-around, center, row);
-  background-color: #e7e6e6;
-  padding-top: 1.5rem;
-  padding-bottom: .5rem;
-  font-size: $font-xs;
-  text-align: left;
-  margin: 0 auto;
-  .business__service {
+  &__info {
+    margin-bottom: 2.5rem;
+  }
+
+  &__services {
+    @include flex(space-around, center, row);
+    background-color: $color-background;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+    font-size: $font-xs;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  &__service--hidden {
+    visibility: hidden;
+  }
+
+  &__asset {
+    @include inline-flex(space-between, center, row);
+  }
+
+  &__service {
     margin-bottom: 0.5rem;
-    .business__service--hidden {
-      visibility: hidden;
-    }
+  }
+
+  &--three {
+    margin-bottom: 2rem;
   }
 }
+//----- Business section end -----//
 
-.business--three {
-  margin-bottom: 2rem;
-}
-
-/* Footer styles ---------- */
+//----- Footer styles start -----//
 .footer__container {
   color: $color-light;
   text-align: center;
 }
 
-.footer--top {
-  background-color: $color-primary;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  .footer__logo {
+.footer {
+
+  &--top {
+    background-color: $color-primary;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  &__logo {
     width: 13rem;
   }
-}
 
-.footer--bottom {
-  background-color: #2e71d4;
-  font-size: $font-xs;
-  padding-top: 1.25rem;
-  padding-bottom: 1rem;
-  p {
-    font-weight: $font-light;
+  &--bottom {
+    background-color: #2e71d4;
+    font-size: $font-xs;
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
   }
-  .footer__text {
-    border-bottom: 1px solid $color-light;
+
+  &__text {
+    @include font($font-xs, $font-light);
     max-width: 90%;
-    margin: 0 auto 7px auto;
+    margin: 0rem 0.25rem 0 0.25rem;
     padding-bottom: 7px;
   }
-}
 
-.footer__social {
-  @include flex(space-between, center, row);
-  max-width: 80%;
-  height: 3rem;
-  margin: 0 auto;
-  .footer__icons {
+  &__text--border {
+    border-bottom: 1px solid $color-light;
+    margin: 0rem auto 0.5rem auto;
+  }
+
+  &__social {
+    @include flex(space-between, center, row);
+    max-width: 80%;
+    height: 3rem;
+    margin: 0 auto;
+  }
+
+  &__icons {
     @include flex(space-between, center, row);
     width: 6rem;
   }
-  .footer__img {
+
+  &__img {
     width: auto;
     height: 1.5rem;
   }
 }
+//---- Footer end -----//
 
-/* Desktop Only ----- */
+// Desktop Only Elements & Styles ----- //
 .business__phone--desktop {
   display: none;
 }
 
-.navigation {
+.business__number--desktop {
   display: none;
 }
 
@@ -354,5 +418,5 @@
   display: none;
 }
 
-// Media query style sheets ----- //
+// Media query style sheet import ----- //
 @import 'partials/media';

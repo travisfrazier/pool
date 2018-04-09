@@ -3,6 +3,7 @@
 // Font-weights
 $font-family-primary: 'OpenSans', sans-serif;
 $font-bold: 700;
+$font-semi-bold: 500;
 $font-regular: 400;
 $font-light: 200;
 $font-extraBold: 900;
@@ -12,6 +13,7 @@ $font-italic: 400;
 // Font-sizes 
 $font-xxs: 0.70rem;
 $font-xs: 0.75rem;
+$font-talk: 0.83rem; // Business talk section only 
 $font-s: 0.90rem;
 $font-m: 1rem;
 $font-l: 1.25rem;
@@ -21,9 +23,11 @@ $font-xl: 1.5rem;
 $color-primary: #1f59b1;
 $color-secondary: #2bcece;
 $color-dark: #154080;
-$color-footer: #2e71d4;
+$color-bright: #2f77e2;
 $color-light: #ffffff;
-$color-background: #f0eeee;
+$color-border: #d1cdcd;
+$color-black: #000000;
+$color-background: #f5f3f3;
 
 // Global Mixins
 @mixin flex($justify-content, $align-items, $flex-direction) {
@@ -33,19 +37,30 @@ $color-background: #f0eeee;
   flex-direction: $flex-direction;
 }
 
+@mixin inline-flex($justify-content, $align-items, $flex-direction) {
+  display: inline-flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+
 @mixin font($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
 }
 
-// Base Styles 
-html {
+//Base Styles 
+* {
   box-sizing: border-box;
+}
+
+html {
   font-size: 16px;
-  body {
-    font-family: $font-family-primary;
-    overflow-x: hidden;
-  }
+}
+
+body {
+  font-family: $font-family-primary;
+  overflow-x: hidden;
 }
 
 a {
@@ -66,4 +81,38 @@ button, input[type="submit"], input[type="reset"] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+input[type=radio] {
+  visibility: hidden;
+}
+
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:21px;
+  height:21px;
+  background-color: $color-light;
+  border: 1px solid #b4b1b1;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + label span {
+  border: 7px solid $color-primary;
+}
+
+input[type="radio"] + label span {
+  display:inline-block;
+  width:17px;
+  height:17px;
+  background-color: $color-light;
+  border: 1px solid #b4b1b1;
+  border-radius: 5px;
+}
+
+input[type="radio"]:checked + label span {
+  border: 6px solid $color-primary;
 }

@@ -17,42 +17,40 @@
     <div class="top__content">
       <ul class="top__list">
         <a href="http://www.hudsonpooldist.com/" target="_blank"><li class="top__item">Dealers and Distributors</li></a>
-        <a href="http://americanpool.com/services/pool-maintenance-services/" target="_blank"><li class="top__item">Commercial Service</li></a>
+        <a href="http://americanpool.com/services/pool-maintenance-services/" target="_blank"><li class="top__item top__item--com">Commercial Service</li></a>
+        <img class="top__image" src="./resources/images/action-commercial-icon.png">
       </ul>
     </div>
   </div>
 
   <!-- Banner and Navigation -->
-  <header>
+  <header class="nav__container">
     <nav class="nav">
-      <div class="nav__container">
-        <div class="nav__content">
-          <img class="nav__logo" src="./resources/images/pool-pros-logo.png">
-          <a href="#main"><span class="nav__find ss-location">FIND A PRO</span></a>
-          <a class="nav__link--mobile" href="#">
-            <img class="nav__button" src="./resources/images/menu-icon-mobile.png">
-          </a>
-        </div>
-        <div class="nav__menu">
-          <a href="#" class="nav__close">X</a>
-          <h3 class="nav__title--mobile">MENU</h3>
-          <ul class="nav__list">
-            <li class="nav__li"><a href="#">Pools &amp; Spas</a></li>
-            <li class="nav__li"><a href="#">Supplies</a></li>
-            <li class="nav__li"><a href="#">Resources</a></li>
-            <li class="nav__li nav__li--last"><a href="#">Services</a></li>
-            <li class="nav__li nav__li--dk"><a href="#main">
-              <span class="nav__find--dk ss-location">Find a Pool Pro</span>
-            </a></li>
-          </ul>
-        </div>
+      <div class="nav__content">
+        <img class="nav__logo" src="./resources/images/pool-pros-logo.png">
+        <a href="#main"><span class="nav__find"><img class="nav__location" src="./resources/images/location-icon.png">FIND A PRO</span></a>
+        <a class="nav__link--mobile" href="#">
+          <img class="nav__button" src="./resources/images/menu-icon-mobile.png">
+        </a>
+      </div>
+      <div class="nav__menu">
+        <a href="#" class="nav__close">X</a>
+        <h3 class="nav__title--mobile">MENU</h3>
+        <ul class="nav__list">
+          <li class="nav__li"><a href="#">Pools &amp; Spas</a></li>
+          <li class="nav__li"><a href="#">Supplies</a></li>
+          <li class="nav__li"><a href="#">Resources</a></li>
+          <li class="nav__li nav__li--last"><a href="#">Services</a></li>
+          <li class="nav__li nav__li--dk"><a href="#main">
+            <span class="nav__find--dk"><img class="nav__location" src="./resources/images/location-icon.png">Find a Pool Pro</span>
+          </a></li>
+        </ul>
       </div>
     </nav>
   </header>
 
   <!-- Banner Section -->
   <div class="banner">
-    <!-- <img class="banner__img" src="./resources/images/water-image.png"> -->
   </div>
 
   <!-- Filter Result Section -->
@@ -66,11 +64,18 @@
       <span class="filters__title--desktop">Filter Results</span>
     </div>
     <form class="filters__form">
-      <span><input class="filters__input" type="checkbox"><label class="filters__label">Service</label></span><br>
-      <span><input class="filters__input" type="checkbox"><label class="filters__label">Installation</label></span><br>
-      <span><input class="filters__input" type="checkbox"><label class="filters__label">Residential</label></span><br>
-      <span><input class="filters__input" type="checkbox"><label class="filters__label">Commercial</label></span>
-      <!-- <span><img class="filters__question" src="./resources/images/tool-tip-icon-filtering.png" align="middle"></span> -->
+      <input class="filters__input" type="checkbox" id="c1">
+      <label class="filters__label" for="c1"><span class="filters__check"></span>Service</label>
+
+      <input class="filters__input" type="checkbox" id="c2">
+      <label class="filters__label" for="c2"><span class="filters__check"></span>Installation</label>
+
+      <input class="filters__input" type="checkbox" id="c3">
+      <label class="filters__label" for="c3"><span class="filters__check"></span>Residential</label>
+      
+      <input class="filters__input" type="checkbox" id="c4">
+      <label class="filters__label" for="c4"><span class="filters__check"></span>Commercial</label>
+      <img class="filters__question" src="./resources/images/tool-tip-icon-filtering.png">
     </form>
   </section>
 
@@ -78,23 +83,23 @@
   <main id="main" class="business__container">
     <!-- Business 1 -->
     <div class="business business--one">
-      <h1 class="business__title">Aqua Experts</h1><br>
-      <a class="business__call" href="tel:+1-888-888-8888">
-        <div class="business__phone business__phone--mobile">
-          <img src="./resources/images/phone-icon-mobile.png">
-          <span class="business__call">Tap to call</span>
-          <span class="business__number">1.888.888.8888</span>
-        </div>
-      </a>
-      <div class="business__phone business__phone--desktop">
-        <span class="business__number--desktop"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      <div class="business__title--container">
+        <h1 class="business__title">Aqua Experts</h1><br>
       </div>
+      <a class="business__call" href="tel:+1-888-888-8888">
+      <div class="business__phone">
+        <img class="business__image business__icon" src="./resources/images/phone-icon-mobile.png">
+        <span class="business__tap">Tap to call</span>
+        <span class="business__number">1.888.888.8888</span>
+        <span class="business__number--desktop"><img class="business__image business__image--num" src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      </div>
+      </a>
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--one" href="#">
-        <div class="business__contact">
-          <img class="business__img" src="./resources/images/email-icon.png">
-          <span class="business__pro">Contact this Pro</span>
-        </div>
+      <div class="business__contact">
+        <img class="business__image business__img" src="./resources/images/email-icon.png">
+        <span class="business__pro">Contact this Pro</span>
+      </div>
       </a>
       <div class="business__info">
         <h2 class="business__hours">Business Hours</h2>
@@ -105,18 +110,18 @@
       <div class="business__services">
         <div>
           <div class="business__service">
-            <span><img src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
           </div>
           <div class="business__service">
-            <span><img src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
           </div>
         </div>
         <div>
           <div class="business__service">
-            <span><img src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
           </div>
           <div class="business__service">
-            <span class="business__service--hidden"><img src="./resources/images/gear-residential-pro.png" align="middle"> Residential Pro</span>
+            <span class="business__asset business__service--hidden"><img src="./resources/images/gear-residential-pro.png" align="middle"> Commercial Pro</span>
           </div>
         </div>
       </div>
@@ -124,23 +129,23 @@
 
     <!-- Business 2 -->
     <div class="business business--two">
-      <h1 class="business__title">Premium Pools &amp; Spas of<br> Charlotte</h1>
-      <a class="business__call" href="tel:+1-888-888-8888">
-        <div class="business__phone business__phone--mobile">
-          <img src="./resources/images/phone-icon-mobile.png">
-          <span class="business__call">Tap to call</span>
-          <span class="business__number">1.888.888.8888</span>
-        </div>
-      </a>
-      <div class="business__phone business__phone--desktop">
-        <span class="business__number--desktop"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      <div class="business__title--container business__title--container--two">
+        <h1 class="business__title">Premium Pools &amp; Spas of<br> Charlotte</h1>
       </div>
+      <a class="business__call" href="tel:+1-888-888-8888">
+      <div class="business__phone">
+        <img class="business__image business__icon" src="./resources/images/phone-icon-mobile.png">
+        <span class="business__tap">Tap to call</span>
+        <span class="business__number">1.888.888.8888</span>
+        <span class="business__number--desktop"><img class="business__image business__image--num" src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      </div>
+      </a>
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--two" href="#">
-        <div class="business__contact">
-          <img class="business__img" src="./resources/images/email-icon.png">
-          <span class="business__pro">Contact this Pro</span>
-        </div>
+      <div class="business__contact">
+        <img class="business__image business__img" src="./resources/images/email-icon.png">
+        <span class="business__pro">Contact this Pro</span>
+      </div>
       </a>
       <div class="business__info">
         <h2 class="business__hours">Business Hours</h2>
@@ -151,18 +156,18 @@
       <div class="business__services">
         <div>
           <div class="business__service">
-            <span><img src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
           </div>
           <div class="business__service">
-            <span><img src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
           </div>
         </div>
         <div>
           <div class="business__service">
-            <span><img src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
           </div>
           <div class="business__service">
-            <span><img src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
           </div>
         </div>
       </div>
@@ -171,23 +176,23 @@
 
     <!-- Business 3 -->
     <div class="business business--three">
-      <h1 class="business__title">Carolina Pool Specialists</h1><br>
-      <a class="business__call" href="tel:+1-888-888-8888">
-        <div class="business__phone business__phone--mobile">
-          <img src="./resources/images/phone-icon-mobile.png">
-          <span class="business__call">Tap to call</span>
-          <span class="business__number">1.888.888.8888</span>
-        </div>
-      </a>
-      <div class="business__phone business__phone--desktop">
-        <span class="business__number--desktop"><img src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      <div class="business__title--container">
+        <h1 class="business__title">Carolina Pool Specialists</h1><br>
       </div>
+      <a class="business__call" href="tel:+1-888-888-8888">
+      <div class="business__phone">
+        <img class="business__image business__icon" src="./resources/images/phone-icon-mobile.png">
+        <span class="business__tap">Tap to call</span>
+        <span class="business__number">1.888.888.8888</span>
+        <span class="business__number--desktop"><img class="business__image business__image--num" src="./resources/images/phone-icon-desktop.png" align="middle"> 1.888.888.8888</span>
+      </div>
+      </a>
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--three" href="#">
-        <div class="business__contact">
-          <img class="business__img" src="./resources/images/email-icon.png">
-          <span class="business__pro">Contact this Pro</span>
-        </div>
+      <div class="business__contact">
+        <img class="business__image business__img" src="./resources/images/email-icon.png">
+        <span class="business__pro">Contact this Pro</span>
+      </div>
       </a>
       <div class="business__info">
         <h2 class="business__hours">Business Hours</h2>
@@ -198,18 +203,18 @@
       <div class="business__services">
         <div>
           <div class="business__service">
-            <span><img src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/star-installation-pro.png" align="middle"> Installation Pro</span>
           </div>
           <div class="business__service">
-            <span><img src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
           </div>
         </div>
         <div>
           <div class="business__service">
-            <span><img src="./resources/images/home-residential-pro.png" align="middle"> Residential Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
           </div>
           <div class="business__service">
-            <span><img src="./resources/images/gear-service-pro.png" align="middle"> Service Pro</span>
+            <span class="business__asset"><img class="business__image" src="./resources/images/users-commercial-pro.png" align="middle"> Commercial Pro</span>
           </div>
         </div>
       </div>
@@ -230,25 +235,27 @@
       <fieldset class="modal__inputs">
         <img class="modal__circle modal__circle--one" src="./resources/images/circle-form.png">
         <label class="modal__label">First and last name</label>
-        <input class="modal__input modal__input--name" name="name" type="text" oninput="imgValidate()">
+        <input class="modal__input modal__input--name" name="name" type="text" oninput="imgValidate()" required>
         
         <img class="modal__circle modal__circle--two" src="./resources/images/circle-form.png">
         <label class="modal__label">Phone Number</label>
-        <input class="modal__input--num" name="number" type="text" oninput="imgValidate()">
+        <input class="modal__input--num" name="number" type="tel" oninput="imgValidate()" required>
 
         <img class="modal__circle modal__circle--three" src="./resources/images/circle-form.png">
         <label class="modal__label">Email Address</label>
-        <input class="modal__input modal__input--email" name="email" type="email" oninput="imgValidate()">
+        <input class="modal__input modal__input--email" name="email" type="email" oninput="imgValidate()" required>
 
         <span class="modal__opt">optional</span>
         <label class="modal__label">Comments or questions</label>
-        <textarea class="modal__textarea" id="comment" name="user_comment"></textarea>
+        <textarea class="modal__textarea" id="comment" name="comment" type="text"></textarea>
 
         <span class="modal__opt--dk">optional</span>
         <label class="modal__label">Do you currently own a pool or spa?</label>
         <div class="modal__radios">
-          <input class="modal__input--radio" type="radio" value="yes"><label class="modal__light">Yes</label>
-          <input class="modal__input--radio" type="radio" value="no"><label class="modal__light" for="news">No</label>
+          <input class="modal__input--radio" type="radio" name="radio" id="c5">
+          <label class="modal__light modal__light--top" for="c5"><span class="modal__radio">Yes</span>Yes</label>
+          <input class="modal__input--radio" type="radio" name="radio" id="c6">
+          <label class="modal__light" for="c6"><span class="modal__radio">No</span>No</label>
         </div>
         <input class="modal__submit" type="submit" value="Send">
         <div class="modal__desktop">
@@ -264,7 +271,6 @@
 </section>
 <!-- Contact Modal End -->
 
-
   <!-- Footer Section -->
   <footer class="footer__container">
     <div class="footer footer--top">
@@ -279,8 +285,10 @@
       </div>
     </div>
     <div class="footer footer--bottom">
-      <p class="footer__text">Dealers and Distrubutors | Commercial Service</p>
-      <p>2017 Pool Pros | Privacy Policy | Terms and Conditions</p>
+      <p class="footer__text footer__text--border">Dealers and Distrubutors <span class="footer__text">|</span>Commercial Service</p>
+      <span class="footer__text">&copy; 2017 Pool Pros</span><span class="footer__text">|</span>
+      <span class="footer__text">Privacy Policy</span><span class="footer__text">|</span>
+      <span class="footer__text">Terms and Conditions</span>
     </div>
   </footer>
 
