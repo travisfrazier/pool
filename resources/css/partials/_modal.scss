@@ -286,7 +286,7 @@
       margin-right: -0.75rem;
     }
   }
-  .modal__input--radio[type="radio"] + label span {
+  .modal__input--radio[type="radio"] + .modal__light .modal__radio {
     display:inline-block;
     width: 4rem;
     height: auto;
@@ -294,7 +294,7 @@
     border-radius: 5px;
     //padding: 1rem 2rem;
   }
-  .modal__input--radio[type="radio"]:checked + label span {
+  .modal__input--radio[type="radio"]:checked + .modal__light .modal__radio {
     background-color: #2bcece;
     color: $color-light;
     border: 1px solid #b4b1b1;
