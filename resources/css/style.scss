@@ -19,7 +19,6 @@
   &__content {
     @include flex(space-between, center, row);
     height: 60px;
-    background-color: $color-light;
   }
 
   &__logo {
@@ -29,15 +28,12 @@
 
   &__find {
     @include inline-flex(center, center, row);
+    @include font($font-s, $font-bold);
     border: 2px solid $color-primary;
     z-index: 4;
     color: $color-primary;
     padding: 0.5rem;
     border-radius: 5px;
-    margin: 0rem;
-    font-size: $font-s;
-    font-weight: $font-bold;
-    text-decoration-style: none;
   }
 
   &__location {
@@ -76,55 +72,49 @@
     padding: 1rem;
     margin-bottom: 2px;
     position: relative;
-    a:visited { 
-      color: #696b6d;
-    }
+  }
+
+  &__li--link:visited {
+    color: $color-link;
   }
   
   //Mobile drop down start
   &__menu {
-    top: 100%;
-    transition-property: all;
     transition-duration: 0.75s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     overflow: hidden;
     position: absolute;
-    z-index: 1;
     background-color: $color-light;
     width: 100%;
     height: 0px;
   }
 
   &__close {
+    @include font($font-l, $font-bold);
     position: absolute;
     right: 20px;
     top: 15px;
-    font-weight: $font-bold;
     color: $color-secondary;
-    font-size: $font-l;
     &:visited {
       color: $color-secondary;
     }
   }
 
   &__link--mobile {
-    margin-top: 1rem;
     width: 5rem;
     height: 3.25rem;
-    padding: 0;
-    margin: 0;
     z-index: 4;
   }
 
   &__title--mobile {
+    @include font($font-m, $font-bold);
     color: $color-primary;
     padding: 1.75rem;
     text-align: center;
-    font-weight: $font-bold;
   }
 
   &__menu--open {
-    height: 280px !important;
+    height: 280px;
     border-top: 5px solid $color-secondary;
     border-bottom: 5px solid $color-secondary;
   }
