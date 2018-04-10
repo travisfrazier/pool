@@ -165,7 +165,7 @@
   }
 
   //Desktop only modal elements 
-  &__opt--dk, &__submit--desktop, &__arrow {
+  &__opt--dk, &__submit--desktop, &__arrow, &__terms {
     display: none;
   }
 }
@@ -282,6 +282,12 @@
     }
     &__light--top {
       margin-right: -0.75rem;
+    }
+    &__terms {
+      @include font($font-xs, $font-light);
+      display: block;
+      background-color: $color-background;
+      padding: 1rem;
     }
   }
   //----- Desktop modal end -----//
