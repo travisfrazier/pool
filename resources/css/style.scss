@@ -143,7 +143,6 @@
   &__head {
     @include flex(space-between, center, row);
     @include font($font-s, $font-bold);
-    margin: 0 auto;
   }
   
   &__result {
@@ -182,9 +181,9 @@
     transition-duration: 0.75s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     background-color: $color-light;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: -1.1rem;
+    width: 323.5px;
+    position: relative;
+    top: -1.1rem;
   }
 
   &__input {
@@ -208,10 +207,9 @@
   }
   //Open class for filter drop down
   &__form--open {
-    height: 240px !important;
+    height: 240px;
     position: relative;
     padding-left: 1rem;
-    //box-shadow: 0 0 2px 1px rgb(180, 178, 178);
     border: 1.25px solid $color-border;
   }
 }
@@ -232,11 +230,6 @@
 
   &__title {
     @include font($font-xl, $font-light);
-    margin-bottom: 1.5rem;
-  }
-
-  &__time {
-    font-size: $font-s;
     margin-bottom: 1.5rem;
   }
   
@@ -270,7 +263,7 @@
   &__talk {
     @include font($font-talk, $font-light);
     font-style: italic;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem;
   }
 
   &__contact {
@@ -301,6 +294,7 @@
   }
 
   &__time {
+    @include font($font-s, $font-regular);
     margin-top: 0;
     margin-bottom: 0.75rem;
   }

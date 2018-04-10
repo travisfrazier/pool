@@ -1,5 +1,5 @@
 // Media Query for tablet view 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 550px) {
   // Nav section
   .nav__find {
     @include font($font-l, $font-regular);
@@ -41,6 +41,12 @@
     max-width: 50%;
   }
 
+  // Business section 
+  .business__container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
   // Footer section
   .footer__social {
     justify-content: space-around;
@@ -61,7 +67,6 @@
 
   // Navigation start ----- //
   .nav__container {
-    @include flex(space-between, center, row);
     height: 100px;
     margin: 0 auto;
     width: 100%;  
@@ -187,7 +192,6 @@
     z-index: 3;
 
     &__head {
-      margin: 0 auto;
       margin: 0;
       background-color: $color-background;
       border: none;
@@ -205,6 +209,7 @@
 
     &__form {
       @include flex(center, center, row);
+      position: static;
       background-color: $color-background;
       height: auto;
       border: none;
@@ -302,15 +307,9 @@
 
 
   /* Footer Styles ----- */
-  .footer__container {
-    color: $color-light;
-    text-align: center;
-  }
-
   .footer {
 
     &--top {
-      background-color: $color-primary;
       padding-top: 2rem;
       padding-bottom: 0.75rem;
     }

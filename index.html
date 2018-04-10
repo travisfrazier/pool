@@ -82,7 +82,7 @@
   <!-- Main Section Results -->
   <main id="main" class="business__container">
     <!-- Business 1 -->
-    <div class="business business--one">
+    <section class="business business--one">
       <div class="business__title--container">
         <h1 class="business__title">Aqua Experts</h1><br>
       </div>
@@ -97,7 +97,7 @@
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--one" href="#">
       <div class="business__contact">
-        <img class="business__image business__img" src="./resources/images/email-icon.png" alt="email icon">
+        <img class="business__img" src="./resources/images/email-icon.png" alt="email icon">
         <span class="business__pro">Contact this Pro</span>
       </div>
       </a>
@@ -121,14 +121,14 @@
             <span class="business__asset"><img class="business__image" src="./resources/images/gear-service-pro.png" alt="service icon"> Service Pro</span>
           </div>
           <div class="business__service">
-            <span class="business__asset business__service--hidden"><img src="./resources/images/gear-residential-pro.png" alt="commercial icon"> Commercial Pro</span>
+            <span class="business__asset business__service--hidden"><img class="business__image" src="./resources/images/users-commercial-pro.png" alt="commercial icon"> Commercial Pro</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Business 2 -->
-    <div class="business business--two">
+    <section class="business business--two">
       <div class="business__title--container business__title--container--two">
         <h1 class="business__title">Premium Pools &amp; Spas of<br> Charlotte</h1>
       </div>
@@ -143,7 +143,7 @@
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--two" href="#">
       <div class="business__contact">
-        <img class="business__image business__img" src="./resources/images/email-icon.png" alt="email-icon">
+        <img class="business__img" src="./resources/images/email-icon.png" alt="email-icon">
         <span class="business__pro">Contact this Pro</span>
       </div>
       </a>
@@ -171,10 +171,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Business 3 -->
-    <div class="business business--three">
+    <section class="business business--three">
       <div class="business__title--container">
         <h1 class="business__title">Carolina Pool Specialists</h1><br>
       </div>
@@ -189,7 +189,7 @@
       <p class="business__talk">Can't talk now? Click below to send an email.</p>
       <a class="business__email business__email--three" href="#">
       <div class="business__contact">
-        <img class="business__image business__img" src="./resources/images/email-icon.png" alt="email icon">
+        <img class="business__img" src="./resources/images/email-icon.png" alt="email icon">
         <span class="business__pro">Contact this Pro</span>
       </div>
       </a>
@@ -217,7 +217,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 
 <!-- Contact Modal Start -->
@@ -242,7 +242,7 @@
 
         <img class="modal__circle modal__circle--three" src="./resources/images/circle-form.png" alt="modal-circle">
         <label class="modal__label">Email Address</label>
-        <input class="modal__input modal__input--email" name="email" type="email" oninput="imgValidate()" required>
+        <input class="modal__input modal__input--email" name="email" type="email" oninput="imgValidate()" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
 
         <span class="modal__opt">optional</span>
         <label class="modal__label">Comments or questions</label>

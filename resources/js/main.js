@@ -33,11 +33,22 @@ function openModalThree() {
     modal.style.display = 'block';
 }
 
-// Close all modals 
+// Close modal button 
 document.querySelector('.modal__close').addEventListener('click', closeModal);
+
 function closeModal() {
     modal.style.display = 'none';
+} 
+
+// Close modal by clicking outside 
+document.addEventListener('click', clickOut);
+
+function clickOut(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
 }
+
 
 
 // Mobile Navigation drop down ----- //
@@ -70,20 +81,22 @@ function openFilter() {
 function imgValidate() {
     const inputName = document.querySelector('.modal__input--name').value.trim();
     const imgName = document.querySelector('.modal__circle--one');
-    const inputNum = document.querySelector('.modal__input--num').value.trim();
+    const inputNum = document.querySelector('.modal__input--num').value.replace(/\D/g, '');
     const imgNum = document.querySelector('.modal__circle--two'); 
     const inputEmail = document.querySelector('.modal__input--email').value.trim();
     const imgEmail = document.querySelector('.modal__circle--three');
+    const alpha = /^[a-z][a-z\s]*$/;
+    const num = /[0-9-\-]{11,}/;
 
     //Name image circle
-    if (!inputName) {
-        imgName.setAttribute('src', 'resources/images/circle-form.png');
+    if (inputName.match(alpha)) {
+        imgName.setAttribute('src', 'resources/images/checkmark-circle.png');
     } else {
-         imgName.setAttribute('src', 'resources/images/checkmark-circle.png');
+        imgName.setAttribute('src', 'resources/images/circle-form.png');
     }
 
     //Number imagle circle
-    if (inputNum.length < 10) {
+    if (!inputNum.match(/\d{10,14}/)) {
         imgNum.setAttribute('src', 'resources/images/circle-form.png');
     } else {
         imgNum.setAttribute('src', 'resources/images/checkmark-circle.png');
@@ -97,30 +110,3 @@ function imgValidate() {
     }
 
 }
-
-// Added required in the HTML inputs for these instead of running this script
-// function formValidate() {
-//     const name = document.querySelector('.modal__input--name').value.trim();
-//     const number = document.querySelector('.modal__input--num').value.trim();
-//     const email = document.querySelector('.modal__input--email').value.trim();
-
-//     //Name
-//     if (!name) {
-//       alert('Please enter your name');
-//       return false;
-//     }
-
-//     //Number 
-//     if (number < 9) {
-//         alert('Please enter your number');
-//         return false;
-//     }
-
-//     //Email 
-//     if (!email) {
-//         alert('Please enter your email');
-//         return false;
-//     }
-// }
-
-// Code to submit to server goes here
