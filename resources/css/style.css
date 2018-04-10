@@ -666,7 +666,7 @@ a:visited {
 .top {
   display: none; }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 555px) {
   .nav__find {
     font-size: 1.25rem;
     font-weight: 400; }
